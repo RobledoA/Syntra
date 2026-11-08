@@ -1,0 +1,8 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 36" width="32" height="36" fill="none">
+  <!-- Top loop + stem -->
+  <path d="M12 18H20V5H12C8.134 5 5 8.134 5 12C5 15.866 8.134 18 12 18Z" stroke="#A95335" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Bottom loop + stem -->
+  <path d="M20 18H12V31H20C23.866 31 27 27.866 27 24C27 20.134 23.866 18 20 18Z" stroke="#A95335" stroke-width="2.8" stroke-linejoin="round"/>
+  <!-- Center dividing line -->
+  <line x1="12" y1="18" x2="20" y2="18" stroke="#A95335" stroke-width="2.8"/>
+</svg>

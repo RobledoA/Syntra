@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5. Explorar innovación · IA y Pipeline EIA · Syntra Consulting</title>
+  <meta name="description" content="Fase 5: Pipeline de IA para Alta Asistida de Contratos, 12 metadatos estructurados, compuerta Human-in-the-Loop y protocolo PoC para EIA.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts: Montserrat Exclusivamente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Syntra Consulting Inicio">
+        <img src="assets/logo-crop.png" alt="Syntra Consulting" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation with EIA Dropdown -->
+      <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#equipo" class="nav-link">Equipo</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+          
+          <li class="nav-item-dropdown">
+            <a href="eia.html" class="nav-link active">
+              <span>EIA</span>
+              <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="eia.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-folder-tree" style="color:var(--primary-blue);"></i>
+                <span>Índice General EIA</span>
+                <span class="nav-dropdown-badge">Hub</span>
+              </a>
+              <a href="1-entender-la-organizacion.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>1. Entender la organización</span>
+              </a>
+              <a href="2-definir-el-cambio.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>2. Definir el cambio</span>
+              </a>
+              <a href="4-evaluar-opciones.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>4. Evaluar opciones</span>
+              </a>
+              <a href="5-explorar-innovacion.html" class="nav-dropdown-item active">
+                <i class="fa-solid fa-robot"></i>
+                <span>5. Explorar innovación</span>
+              </a>
+              <a href="6-cierre.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <span>6. Cierre & Hoja de Ruta</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Phase Hero Banner (Clean, Typographic, No Clutter) -->
+    <section class="hero-section" style="padding: 64px 0 40px;">
+      <div class="ambient-glow"></div>
+      <div class="container hero-with-illustration" style="position:relative; z-index:2;">
+        
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:8px; background:#FFFFFF; padding:4px 12px; border-radius:100px; border:1px solid var(--border-card); margin-bottom:10px;">
+            <i class="fa-solid fa-building" style="font-size:0.75rem; color:var(--primary-blue);"></i>
+            <span style="font-size:0.75rem; font-weight:700; color:var(--text-main);">Grupo Madero Este · EIA</span>
+          </div>
+          <span class="hero-kicker" style="display:block;">Metodología Syntra · Fase 05</span>
+          <h1 class="hero-title" style="margin-top:4px;">
+            5. Explorar innovación
+          </h1>
+          <p class="hero-lead" style="max-width:620px; margin-top:14px;">
+            Aplicación práctica de Inteligencia Artificial para EIA: pipeline de extracción asistida de contratos corporativos, compuerta Human-in-the-Loop y protocolo de validación cuantitativa.
+          </p>
+        </div>
+
+        <div class="hero-illustration-box">
+          <img src="assets/undraw_ai.svg" alt="Ilustración Inteligencia Artificial EIA" class="undraw-img">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Content Layout Grid -->
+    <section style="padding: 24px 0 96px;">
+      <div class="container">
+        
+        <div class="spec-layout-grid">
+          
+          <!-- Main Column -->
+          <div class="spec-main">
+            
+            <!-- Barra de Metodología con Popover Interactivo (Explicación Sencilla) -->
+            <div class="methodology-bar-wrapper">
+              <div class="methodology-pill-bar">
+                <div class="methodology-pill-info">
+                  <span class="methodology-bulb-badge" aria-hidden="true">
+                    <i class="fa-solid fa-lightbulb"></i>
+                  </span>
+                  <div class="methodology-pill-texts">
+                    <span class="methodology-pill-kicker">Metodología de esta fase</span>
+                    <span class="methodology-pill-title">Prueba de Concepto (PoC) con Inteligencia Artificial y Supervisión Humana · ¿En qué consisten?</span>
+                  </div>
+                </div>
+                <button type="button" class="methodology-trigger-btn" aria-expanded="false" aria-controls="popover-metodologia-05">
+                  <i class="fa-solid fa-lightbulb lightbulb-icon-glow"></i>
+                  <span>Ver explicación</span>
+                  <i class="fa-solid fa-chevron-down arrow-indicator"></i>
+                </button>
+              </div>
+
+              <!-- Popover Desplegable -->
+              <aside id="popover-metodologia-05" class="methodology-popover-box" role="region" aria-label="Metodología de Innovación e Inteligencia Artificial">
+                <div class="popover-header">
+                  <div class="popover-badge-tag">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Metodología Explicada Fácil</span>
+                  </div>
+                  <button type="button" class="popover-close-btn" aria-label="Cerrar explicación">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                
+                <h3 class="popover-headline">
+                  ¿Qué es una Prueba de Concepto (PoC) y la supervisión Human-in-the-Loop?
+                </h3>
+
+                <div class="popover-explain-grid">
+                  <!-- Bloque 1: ¿Qué es? -->
+                  <div class="explain-card concept-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon concept-icon"><i class="fa-solid fa-robot"></i></span>
+                      <h4>¿Qué es?</h4>
+                    </div>
+                    <p>
+                      Una <strong>Prueba de Concepto (PoC)</strong> es un ensayo práctico a escala pequeña para verificar si una tecnología nueva realmente funciona y ahorra tiempo antes de invertir dinero en comprarla.<br><br>
+                      El enfoque <strong>Human-in-the-Loop (Humano en el control)</strong> significa que la Inteligencia Artificial asiste leyendo y completando borradores en segundos, pero la revisión y decisión final siempre queda en manos de una persona.
+                    </p>
+                  </div>
+
+                  <!-- Bloque 2: ¿En qué consiste? -->
+                  <div class="explain-card steps-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon steps-icon"><i class="fa-solid fa-list-ol"></i></span>
+                      <h4>¿En qué consiste el método? (Paso a paso)</h4>
+                    </div>
+                    <ul class="explain-steps-list">
+                      <li>
+                        <span class="explain-step-badge">1</span>
+                        <span><strong>Elegir una tarea lenta y manual:</strong> Se toma un proceso que consuma muchas horas (leer contratos en PDF y tipear nombres, montos y fechas en el sistema).</span>
+                      </li>
+                      <li>
+                        <span class="explain-step-badge">2</span>
+                        <span><strong>Probar la extracción con IA:</strong> Se utiliza un modelo de lenguaje que lee los documentos y extrae los datos clave automáticamente.</span>
+                      </li>
+                      <li>
+                        <span class="explain-step-badge">3</span>
+                        <span><strong>Validación humana obligatoria:</strong> La pantalla le muestra los datos sugeridos al empleado para que confirme o corrija antes de guardar en la base de datos.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Bloque 3: ¿Para qué sirve? -->
+                  <div class="explain-card value-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon value-icon"><i class="fa-solid fa-circle-check"></i></span>
+                      <h4>¿Para qué sirve? (Resultado concreto)</h4>
+                    </div>
+                    <ul class="explain-value-list">
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Horas recuperadas:</strong> Reduce drásticamente el tiempo de carga manual para que el personal se dedique a atender clientes y vender.</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Cero riesgo de error:</strong> Al haber siempre un operador validando, no hay peligro de 'alucinaciones' ni fallas de la IA.</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Compra segura:</strong> Se prueba el beneficio real antes de comprometerse con un gasto de software.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="popover-simple-footer">
+                  <span><i class="fa-solid fa-circle-info" style="color:var(--primary-blue); margin-right:6px;"></i> Conceptos de Pruebas de Concepto (PoC) e Inteligencia Artificial con supervisión humana.</span>
+                  <span style="font-weight:600; color:var(--text-main);">Fase 05 · Explorar Innovación</span>
+                </div>
+              </aside>
+            </div>
+
+            <!-- Card 1: Pipeline Visual del Alta Asistida -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">Pipeline de Alta Asistida con IA</h2>
+              <p class="visual-lead-text">
+                Flujo de procesamiento estructurado para acelerar la carga sin riesgo de alucinación ni fallas de confidencialidad:
+              </p>
+
+              <!-- Visual Interactive Pipeline -->
+              <div class="visual-pipeline-row">
+                
+                <div class="visual-pipeline-step">
+                  <div class="visual-pipeline-num">01</div>
+                  <i class="fa-solid fa-file-arrow-up visual-pipeline-icon"></i>
+                  <div class="visual-pipeline-title">Subida PDF</div>
+                  <div class="visual-pipeline-sub">Contrato escaneado o digital de oficina AAA.</div>
+                </div>
+
+                <div class="visual-pipeline-step">
+                  <div class="visual-pipeline-num">02</div>
+                  <i class="fa-solid fa-user-secret visual-pipeline-icon"></i>
+                  <div class="visual-pipeline-title">Anonimización</div>
+                  <div class="visual-pipeline-sub">Tokeniza nombres y CUITs bajo Ley 25.326.</div>
+                </div>
+
+                <div class="visual-pipeline-step active">
+                  <div class="visual-pipeline-num">03</div>
+                  <i class="fa-solid fa-brain visual-pipeline-icon"></i>
+                  <div class="visual-pipeline-title">Extracción LLM</div>
+                  <div class="visual-pipeline-sub">Extrae 12 campos con cita y página exacta.</div>
+                </div>
+
+                <div class="visual-pipeline-step human-gate">
+                  <div class="visual-pipeline-num"><i class="fa-solid fa-check"></i></div>
+                  <i class="fa-solid fa-user-check visual-pipeline-icon"></i>
+                  <div class="visual-pipeline-title">Compuerta HITL</div>
+                  <div class="visual-pipeline-sub">Operador valida visualmente en 2 clics.</div>
+                </div>
+
+                <div class="visual-pipeline-step">
+                  <div class="visual-pipeline-num">05</div>
+                  <i class="fa-solid fa-cloud-check visual-pipeline-icon"></i>
+                  <div class="visual-pipeline-title">Impacto en ERP</div>
+                  <div class="visual-pipeline-sub" style="margin-top:4px;">
+                    Alta confirmada en Webdox + Tango
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Collapsible Annex 01 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Justificación Técnica y Cumplimiento Normativo (T-09)
+                  </div>
+                  <p><strong>Por qué no requiere reentrenar modelos:</strong> Opera mediante zero-shot y few-shot prompting sobre modelos fundacionales preentrenados. Al ser un volumen de ~100 a 200 contratos corporativos, un enfoque de fine-tuning carecería de sentido económico. El costo computacional por documento es inferior a $0,05 USD.</p>
+                  <p><strong>Pipeline de Anonimización Ley 25.326:</strong> Antes del envío a la API del modelo, se sustituyen identificadores personales por marcadores sintéticos (ej. <code>LOCATARIO_1</code>, <code>CUIT_X</code>). El mapping real se retiene en memoria local de EIA y se reinyecta al recibir la respuesta estructurada. Se firma con el proveedor cláusula de Zero Data Retention.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: 12 Metadatos Estructurados -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">12 Metadatos Extraídos del Contrato</h2>
+              <p class="visual-lead-text">
+                Entidades críticas precargadas automáticamente para validación del analista:
+              </p>
+
+              <!-- 12 Visual Metadata Chips -->
+              <div class="visual-chip-grid">
+                <div class="visual-chip-item"><i class="fa-solid fa-building"></i> 01. Razón Social Locatario</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-id-card"></i> 02. Número de CUIT</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-door-open"></i> 03. Unidad Funcional / Piso</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-hourglass-half"></i> 04. Vigencia (Meses)</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-calendar-days"></i> 05. Inicio y Vencimiento</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-money-bill-wave"></i> 06. Canon Locativo Mensual</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-coins"></i> 07. Moneda (USD / UVA / ARS)</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-chart-line"></i> 08. Pauta de Ajuste / Índice</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-vault"></i> 09. Depósito en Garantía</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-shield-halved"></i> 10. Compañía Aseguradora</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-file-shield"></i> 11. Número de Póliza</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-bell"></i> 12. Vencimiento de Caución</div>
+              </div>
+
+              <!-- Collapsible Annex 02 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Las 4 Alternativas Postergadas
+                  </div>
+                  <p><strong>Por qué se descartaron las otras 4 opciones de IA:</strong></p>
+                  <ul style="margin-left:20px; font-size:0.8125rem; line-height:1.6;">
+                    <li><strong>Chatbot a locatarios:</strong> Descartado por riesgo de respuestas alucinadas comprometiendo responsabilidades legales de EIA.</li>
+                    <li><strong>Análisis predictivo de vacancia:</strong> Descartado porque la muestra (~40 contratos activos) es estadísticamente insuficiente.</li>
+                    <li><strong>Generación automática de contratos:</strong> Descartado por requerir dictamen letrado indelegable en contratos en moneda extranjera.</li>
+                    <li><strong>Scoring automatizado:</strong> Descartado por restricciones normativas de secreto bancario y BCRA.</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Protocolo de PoC -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">Protocolo Cuantitativo de Prueba de Concepto (PoC)</h2>
+              <p class="visual-lead-text">
+                Condiciones de prueba controlada antes de autorizar cualquier despliegue operativo:
+              </p>
+
+              <!-- 3 PoC Metric Tiles -->
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:14px; margin:20px 0;">
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
+                  <div style="font-size:2.2rem; font-weight:800; color:var(--primary-blue);">20</div>
+                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Contratos de Muestra</strong>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">10 estándar · 5 adendas · 5 escaneados</span>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
+                  <div style="font-size:2.2rem; font-weight:800; color:#16A34A;">≥ 85%</div>
+                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Exactitud Mínima</strong>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">Umbral estricto para pasar a producción</span>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
+                  <div style="font-size:2.2rem; font-weight:800; color:var(--text-main);">100%</div>
+                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Citas Comprobables</strong>
+                  <span style="font-size:0.75rem; color:var(--text-muted);">Cita textual y página verificable</span>
+                </div>
+              </div>
+
+              <!-- Collapsible Annex 03 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Escenarios de Falla y Prelación Jurídica (T-10)
+                  </div>
+                  <p><strong>Escenarios de Estrés Provocados:</strong> La prueba incluye deliberadamente 5 contratos con firmas superpuestas al canon locativo, cláusulas contradictorias de renegociación y monedas mixtas (alquiler en USD y expensas en ARS).</p>
+                  <p><strong>Orden de Prelación Legal:</strong> Ante cualquier contradicción entre los datos de sistema y el documento en papel o firma digital validada, prevalece siempre el contrato firmado original.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Navigation Dock to Next Phase -->
+            <div class="next-phase-dock">
+              <div class="next-phase-info">
+                <span class="next-phase-label">Siguiente Etapa</span>
+                <span class="next-phase-title">6. Cierre & Hoja de Ruta · Síntesis Ejecutiva y Prioridades</span>
+              </div>
+              <a href="6-cierre.html" class="btn-primary">
+                <span>Ir a Fase 06</span>
+                <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mega Footer -->
+  <footer class="mega-footer" role="contentinfo">
+    <div class="footer-watermark">SYNTRA</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF;">
+            <span class="footer-logo-wrap">
+              <img src="assets/logo-crop.png" alt="Syntra Consulting" class="footer-logo-img">
+            </span>
+          </a>
+          <p class="footer-desc">
+            Syntra Consulting · Metodología de transformación y arquitectura empresarial.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Caso EIA</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="eia.html">Índice General EIA</a></li>
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">1. Entender la organización</a></li>
+            <li class="footer-link-item"><a href="2-definir-el-cambio.html">2. Definir el cambio</a></li>
+            <li class="footer-link-item"><a href="4-evaluar-opciones.html">4. Evaluar opciones</a></li>
+            <li class="footer-link-item"><a href="5-explorar-innovacion.html">5. Explorar innovación</a></li>
+            <li class="footer-link-item"><a href="6-cierre.html">6. Cierre & Hoja de Ruta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Templates Aplicados</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">T-01 Relevamiento</a></li>
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">T-02 Diagnóstico Actual</a></li>
+            <li class="footer-link-item"><a href="2-definir-el-cambio.html">T-03 Visión & T-04 Brechas</a></li>
+            <li class="footer-link-item"><a href="4-evaluar-opciones.html">T-05 a T-08 RFP & TCO</a></li>
+            <li class="footer-link-item"><a href="5-explorar-innovacion.html">T-09 & T-10 Innovación e IA</a></li>
+            <li class="footer-link-item"><a href="6-cierre.html">T-11 Síntesis Ejecutiva</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <p class="footer-desc">
+            contacto@syntra.com · Juana Manso 205, Puerto Madero, CABA
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>Copyright 2026 · Syntra Consulting</div>
+        <div class="footer-legal-links">
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

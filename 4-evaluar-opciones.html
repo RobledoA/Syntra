@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4. Evaluar opciones · Scoring y TCO EIA · Syntra Consulting</title>
+  <meta name="description" content="Fase 4: Evaluación de plataformas para EIA. 8 filtros Go/No-Go, leaderboard de scoring RFP (77 ítems) y desglose de TCO a 3 años.">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Google Fonts: Montserrat Exclusivamente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Syntra Consulting Inicio">
+        <img src="assets/logo-crop.png" alt="Syntra Consulting" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation with EIA Dropdown -->
+      <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="index.html#equipo" class="nav-link">Equipo</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+          
+          <li class="nav-item-dropdown">
+            <a href="eia.html" class="nav-link active">
+              <span>EIA</span>
+              <i class="fa-solid fa-chevron-down" style="font-size:0.65rem;"></i>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="eia.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-folder-tree" style="color:var(--primary-blue);"></i>
+                <span>Índice General EIA</span>
+                <span class="nav-dropdown-badge">Hub</span>
+              </a>
+              <a href="1-entender-la-organizacion.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                <span>1. Entender la organización</span>
+              </a>
+              <a href="2-definir-el-cambio.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-bullseye"></i>
+                <span>2. Definir el cambio</span>
+              </a>
+              <a href="4-evaluar-opciones.html" class="nav-dropdown-item active">
+                <i class="fa-solid fa-scale-balanced"></i>
+                <span>4. Evaluar opciones</span>
+              </a>
+              <a href="5-explorar-innovacion.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-robot"></i>
+                <span>5. Explorar innovación</span>
+              </a>
+              <a href="6-cierre.html" class="nav-dropdown-item">
+                <i class="fa-solid fa-flag-checkered"></i>
+                <span>6. Cierre & Hoja de Ruta</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Phase Hero Banner (Clean, Typographic, No Clutter) -->
+    <section class="hero-section" style="padding: 64px 0 40px;">
+      <div class="ambient-glow"></div>
+      <div class="container hero-with-illustration" style="position:relative; z-index:2;">
+        
+        <div>
+          <div style="display:inline-flex; align-items:center; gap:8px; background:#FFFFFF; padding:4px 12px; border-radius:100px; border:1px solid var(--border-card); margin-bottom:10px;">
+            <i class="fa-solid fa-building" style="font-size:0.75rem; color:var(--primary-blue);"></i>
+            <span style="font-size:0.75rem; font-weight:700; color:var(--text-main);">Grupo Madero Este · EIA</span>
+          </div>
+          <span class="hero-kicker" style="display:block;">Metodología Syntra · Fase 04</span>
+          <h1 class="hero-title" style="margin-top:4px;">
+            4. Evaluar opciones
+          </h1>
+          <p class="hero-lead" style="max-width:620px; margin-top:14px;">
+            Evaluación objetiva de mercado para EIA: 8 filtros excluyentes, matriz RFP de 77 requerimientos funcionales y comparativa de Costo Total de Propiedad a 3 años.
+          </p>
+        </div>
+
+        <div class="hero-illustration-box">
+          <img src="assets/undraw_select_option.svg" alt="Ilustración Selección de Software EIA" class="undraw-img">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Content Layout Grid -->
+    <section style="padding: 24px 0 96px;">
+      <div class="container">
+        
+        <div class="spec-layout-grid">
+          
+          <!-- Main Column -->
+          <div class="spec-main">
+            
+            <!-- Barra de Metodología con Popover Interactivo (Explicación Sencilla) -->
+            <div class="methodology-bar-wrapper">
+              <div class="methodology-pill-bar">
+                <div class="methodology-pill-info">
+                  <span class="methodology-bulb-badge" aria-hidden="true">
+                    <i class="fa-solid fa-lightbulb"></i>
+                  </span>
+                  <div class="methodology-pill-texts">
+                    <span class="methodology-pill-kicker">Metodología de esta fase</span>
+                    <span class="methodology-pill-title">Matriz RFP, Scoring Ponderado y Costo Total (TCO) · ¿En qué consisten?</span>
+                  </div>
+                </div>
+                <button type="button" class="methodology-trigger-btn" aria-expanded="false" aria-controls="popover-metodologia-04">
+                  <i class="fa-solid fa-lightbulb lightbulb-icon-glow"></i>
+                  <span>Ver explicación</span>
+                  <i class="fa-solid fa-chevron-down arrow-indicator"></i>
+                </button>
+              </div>
+
+              <!-- Popover Desplegable -->
+              <aside id="popover-metodologia-04" class="methodology-popover-box" role="region" aria-label="Metodología de Evaluación y RFP">
+                <div class="popover-header">
+                  <div class="popover-badge-tag">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <span>Metodología Explicada Fácil</span>
+                  </div>
+                  <button type="button" class="popover-close-btn" aria-label="Cerrar explicación">
+                    <i class="fa-solid fa-xmark"></i>
+                  </button>
+                </div>
+                
+                <h3 class="popover-headline">
+                  ¿Qué es una Matriz RFP y cómo se evaluaron los proveedores de software?
+                </h3>
+
+                <div class="popover-explain-grid">
+                  <!-- Bloque 1: ¿Qué es? -->
+                  <div class="explain-card concept-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon concept-icon"><i class="fa-solid fa-table-list"></i></span>
+                      <h4>¿Qué es?</h4>
+                    </div>
+                    <p>
+                      Un <strong>RFP</strong> (<em>Request for Proposal</em> o Pliego de Condiciones) es un documento formal donde la empresa escribe con exactitud qué necesita antes de escuchar a los vendedores de software.<br><br>
+                      La <strong>Matriz RFP</strong> es una tabla comparativa donde se califica a cada software con una nota objetiva. El <strong>Costo Total (TCO)</strong> es la suma de todo lo que va a costar el sistema en 3 años (licencias, instalación, soporte y mantenimiento).
+                    </p>
+                  </div>
+
+                  <!-- Bloque 2: ¿En qué consiste? -->
+                  <div class="explain-card steps-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon steps-icon"><i class="fa-solid fa-list-ol"></i></span>
+                      <h4>¿En qué consiste el método? (Paso a paso)</h4>
+                    </div>
+                    <ul class="explain-steps-list">
+                      <li>
+                        <span class="explain-step-badge">1</span>
+                        <span><strong>Filtros mínimos (Go / No-Go):</strong> Se descartan los proveedores que no cumplen con requisitos legales básicos o soporte en Argentina.</span>
+                      </li>
+                      <li>
+                        <span class="explain-step-badge">2</span>
+                        <span><strong>Puntuación por importancia (Scoring):</strong> A cada función (firma digital, alertas de cobro, reportes) se le da un peso y se califica a cada candidato (Webdox, Calipso, Axoft, Microsoft).</span>
+                      </li>
+                      <li>
+                        <span class="explain-step-badge">3</span>
+                        <span><strong>Cálculo del Costo Total (TCO a 3 años):</strong> Se calcula el precio real completo incluyendo horas de puesta en marcha y soporte técnico.</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Bloque 3: ¿Para qué sirve? -->
+                  <div class="explain-card value-card">
+                    <div class="explain-card-header">
+                      <span class="explain-card-icon value-icon"><i class="fa-solid fa-circle-check"></i></span>
+                      <h4>¿Para qué sirve? (Resultado concreto)</h4>
+                    </div>
+                    <ul class="explain-value-list">
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Elección imparcial:</strong> Se compra con números y fundamentos técnicos, no por la simpatía del vendedor comercial.</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Cero costos ocultos:</strong> Se destapan gastos de implementación o mantenimiento anual que no figuraban en el folleto.</span>
+                      </li>
+                      <li>
+                        <i class="fa-solid fa-check"></i>
+                        <span><strong>Poder de negociación:</strong> Permite conseguir descuentos comerciales al poner a competir a los proveedores bajo las mismas reglas.</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="popover-simple-footer">
+                  <span><i class="fa-solid fa-circle-info" style="color:var(--primary-blue); margin-right:6px;"></i> Conceptos de Pliego RFP, Evaluación Multicriterio y Costo Total TCO.</span>
+                  <span style="font-weight:600; color:var(--text-main);">Fase 04 · Evaluar Opciones</span>
+                </div>
+              </aside>
+            </div>
+
+            <!-- Card 1: 8 Filtros Mínimos (Clean Checklist UX) -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">8 Filtros Mínimos Obligatorios (Go / No-Go)</h2>
+              <p class="visual-lead-text">
+                Criterios excluyentes que cualquier proveedor debió superar para ser admitido en la comparativa:
+              </p>
+
+              <!-- Clean Checklist Layout -->
+              <div class="clean-check-grid">
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Soporte legal y comercial en Argentina</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Integración comprobable con Tango Gestión</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Cumplimiento Ley 25.326 de Protección de Datos</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Control de accesos basado en roles (RBAC)</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Alertas automáticas de vencimiento a 90, 60 y 30 días</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Log de auditoría inmutable de modificaciones</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Licenciamiento escalable a 15 usuarios pyme</span>
+                </div>
+                <div class="clean-check-item">
+                  <span class="clean-check-icon"><i class="fa-solid fa-check"></i></span>
+                  <span>Soporte técnico en español en huso horario local</span>
+                </div>
+              </div>
+
+              <!-- Collapsible Annex 01 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Tabla de Filtros Excluyentes (T-05)
+                  </div>
+                  <p><strong>Justificación de Exclusión:</strong> Aquellas soluciones internacionales que carecían de facturación en moneda local o que no ofrecían conectores estandarizados para el ERP Tango Gestión quedaron descartadas de inmediato en esta primera fase de tamizado.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 2: Leaderboard RFP (77 Ítems) -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">Scoring Ponderado de Soluciones</h2>
+              <p class="visual-lead-text">
+                Evaluación multicriterio (Funcionalidad 35%, Tecnología 30%, Costo 20%, Proveedor 15%):
+              </p>
+
+              <!-- Graphical Progress Bars -->
+              <div class="visual-progress-list">
+                
+                <div class="visual-progress-item winner">
+                  <div class="visual-progress-header">
+                    <div class="visual-progress-name">
+                      <strong>1. Webdox CLM (SaaS Especializado)</strong>
+                    </div>
+                    <div class="visual-progress-score">72,2%</div>
+                  </div>
+                  <div class="visual-progress-track">
+                    <div class="visual-progress-bar" style="width: 72.2%;"></div>
+                  </div>
+                  <p style="font-size:0.75rem; color:var(--text-muted); margin:8px 0 0;">89% de cumplimiento nativo en contratos corporativos sin necesidad de programar código.</p>
+                </div>
+
+                <div class="visual-progress-item neutral">
+                  <div class="visual-progress-header">
+                    <div class="visual-progress-name">
+                      <span>2. Microsoft 365 (SharePoint + Power Automate)</span>
+                    </div>
+                    <div class="visual-progress-score">65,9%</div>
+                  </div>
+                  <div class="visual-progress-track">
+                    <div class="visual-progress-bar" style="width: 65.9%;"></div>
+                  </div>
+                  <p style="font-size:0.75rem; color:var(--text-muted); margin:8px 0 0;">Licencias directas accesibles pero exige $30.775 USD en desarrollo a medida para armar flujos.</p>
+                </div>
+
+                <div class="visual-progress-item neutral">
+                  <div class="visual-progress-header">
+                    <div class="visual-progress-name">
+                      <span>3. Calipso Corporate ERP</span>
+                    </div>
+                    <div class="visual-progress-score">64,8%</div>
+                  </div>
+                  <div class="visual-progress-track">
+                    <div class="visual-progress-bar" style="width: 64.8%;"></div>
+                  </div>
+                  <p style="font-size:0.75rem; color:var(--text-muted); margin:8px 0 0;">Rigidez en ciclo contractual y costo sobredimensionado para una pyme de 15 personas.</p>
+                </div>
+
+                <div class="visual-progress-item neutral">
+                  <div class="visual-progress-header">
+                    <div class="visual-progress-name">
+                      <span>4. Módulos Adicionales Tango</span>
+                    </div>
+                    <div class="visual-progress-score">53,4%</div>
+                  </div>
+                  <div class="visual-progress-track">
+                    <div class="visual-progress-bar" style="width: 53.4%;"></div>
+                  </div>
+                  <p style="font-size:0.75rem; color:var(--text-muted); margin:8px 0 0;">Excelente como núcleo contable, pero sin módulo de gestión documental ni alertas avanzadas.</p>
+                </div>
+
+              </div>
+
+              <!-- Collapsible Annex 02 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Ponderaciones del Pliego RFP (T-06)
+                  </div>
+                  <p><strong>Análisis de Dominancia:</strong> Webdox CLM dominó el proceso gracias a su especialización en contratos de oficinas AAA, plantillas inteligentes y workflow de firma electrónica. Microsoft 365 penalizó por los elevados costos y riesgos de programar y mantener soluciones custom sobre SharePoint.</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Card 3: Desglose de TCO a 3 Años -->
+            <article class="visual-slide-card">
+              <h2 class="visual-slide-title">Costo Total de Propiedad a 3 Años (TCO)</h2>
+              <p class="visual-lead-text">
+                Webdox resulta apenas $138 USD/mes más costoso que Microsoft, pero <strong>elimina $30.775 USD en riesgo de desarrollo a medida</strong>:
+              </p>
+
+              <!-- Visual Split Cards -->
+              <div class="visual-split-cards">
+                
+                <div class="visual-split-card winner">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <strong style="font-size:1rem; color:var(--primary-blue);">
+                      Webdox CLM (SaaS)
+                    </strong>
+                    <span style="font-size:0.75rem; font-weight:700; color:#16A34A; text-transform:uppercase;">Recomendado</span>
+                  </div>
+                  <div class="visual-split-price">$71.036 <span style="font-size:1rem; font-weight:600; color:var(--text-muted);">USD</span></div>
+                  <p style="font-size:0.8125rem; color:var(--text-muted); margin-bottom:16px;">TCO Total a 3 años · Listo en 6–8 semanas</p>
+                  
+                  <ul class="spec-bullet-list" style="font-size:0.8125rem; gap:8px;">
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Licencias SaaS (3 años): $43.200 USD</li>
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Implementación estándar: $6.000 USD</li>
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Mantenimiento y conectores: $12.500 USD</li>
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Cero riesgo de desarrollo propio</li>
+                  </ul>
+                </div>
+
+                <div class="visual-split-card">
+                  <div style="display:flex; justify-content:space-between; align-items:center;">
+                    <strong style="font-size:1rem; color:var(--text-main);">
+                      Microsoft 365 Custom
+                    </strong>
+                    <span style="font-size:0.75rem; font-weight:700; color:#64748B; text-transform:uppercase;">Contingencia</span>
+                  </div>
+                  <div class="visual-split-price" style="color:var(--text-body);">$66.073 <span style="font-size:1rem; font-weight:600; color:var(--text-muted);">USD</span></div>
+                  <p style="font-size:0.8125rem; color:var(--text-muted); margin-bottom:16px;">TCO Total a 3 años · Demora 6–9 meses</p>
+                  
+                  <ul class="spec-bullet-list" style="font-size:0.8125rem; gap:8px;">
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Licencias M365 (3 años): $10.800 USD</li>
+                    <li style="color:#DC2626; font-weight:700;"><i class="fa-solid fa-triangle-exclamation" style="color:#DC2626; margin-right:6px;"></i> Desarrollo Custom Inicial: $30.775 USD</li>
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Mantenimiento evolutivo: $14.400 USD</li>
+                    <li><i class="fa-solid fa-check" style="color:#16A34A; margin-right:6px;"></i> Horas internas de supervisión: $10.098 USD</li>
+                  </ul>
+                </div>
+
+              </div>
+
+              <!-- Collapsible Annex 03 -->
+              <div class="annex-box">
+                <button type="button" class="annex-toggle-btn" aria-expanded="false">
+                  <i class="fa-solid fa-book-open"></i>
+                  <span class="toggle-label">Ver anexo documental y detalles</span>
+                  <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                </button>
+                <div class="annex-body">
+                  <div class="annex-header">
+                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Base Compartida y Dictamen de Selección (T-07 & T-08)
+                  </div>
+                  <p><strong>Base Compartida Inamovible:</strong> En ambos escenarios se mantiene constante la inversión existente en Tango Gestión ($4.902 USD/año de soporte y actualización) y la consultoría inicial de procesos ($7.200 USD).</p>
+                  <p><strong>Veredicto:</strong> Se recomienda Webdox por otorgar certidumbre de plazos y soporte especializado. Si la negociación económica final no se ajustara a los topes de presupuesto de EIA, se activa el Plan B (Microsoft 365 / Power Automate).</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Navigation Dock to Next Phase -->
+            <div class="next-phase-dock">
+              <div class="next-phase-info">
+                <span class="next-phase-label">Siguiente Etapa</span>
+                <span class="next-phase-title">5. Explorar innovación · Inteligencia Artificial y PoC</span>
+              </div>
+              <a href="5-explorar-innovacion.html" class="btn-primary">
+                <span>Ir a Fase 05</span>
+                <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Mega Footer -->
+  <footer class="mega-footer" role="contentinfo">
+    <div class="footer-watermark">SYNTRA</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo" style="color:#FFFFFF;">
+            <span class="footer-logo-wrap">
+              <img src="assets/logo-crop.png" alt="Syntra Consulting" class="footer-logo-img">
+            </span>
+          </a>
+          <p class="footer-desc">
+            Syntra Consulting · Metodología de transformación y arquitectura empresarial.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Caso EIA</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="eia.html">Índice General EIA</a></li>
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">1. Entender la organización</a></li>
+            <li class="footer-link-item"><a href="2-definir-el-cambio.html">2. Definir el cambio</a></li>
+            <li class="footer-link-item"><a href="4-evaluar-opciones.html">4. Evaluar opciones</a></li>
+            <li class="footer-link-item"><a href="5-explorar-innovacion.html">5. Explorar innovación</a></li>
+            <li class="footer-link-item"><a href="6-cierre.html">6. Cierre & Hoja de Ruta</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Templates Aplicados</h4>
+          <ul class="footer-links-list">
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">T-01 Relevamiento</a></li>
+            <li class="footer-link-item"><a href="1-entender-la-organizacion.html">T-02 Diagnóstico Actual</a></li>
+            <li class="footer-link-item"><a href="2-definir-el-cambio.html">T-03 Visión & T-04 Brechas</a></li>
+            <li class="footer-link-item"><a href="4-evaluar-opciones.html">T-05 a T-08 RFP & TCO</a></li>
+            <li class="footer-link-item"><a href="5-explorar-innovacion.html">T-09 & T-10 Innovación e IA</a></li>
+            <li class="footer-link-item"><a href="6-cierre.html">T-11 Síntesis Ejecutiva</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Contacto</h4>
+          <p class="footer-desc">
+            contacto@syntra.com · Juana Manso 205, Puerto Madero, CABA
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>Copyright 2026 · Syntra Consulting</div>
+        <div class="footer-legal-links">
+          <a href="#">Términos</a>
+          <a href="#">Privacidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

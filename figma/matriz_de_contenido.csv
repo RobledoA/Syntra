@@ -1,0 +1,70 @@
+ID,Pagina,Seccion,Capa_Figma,Tipo,Texto_Actual,Limite_Caracteres,Notas_Copywriting
+1,Inicio,Navegacion,Nav-Logo-Text,Texto,Syntra Consulting,25,Nombre de la firma consultora
+2,Inicio,Navegacion,Nav-Link-1,Enlace,Inicio,15,Enlace al inicio
+3,Inicio,Navegacion,Nav-Link-2,Enlace,Equipo,15,Salto a la sección del equipo consultor
+4,Inicio,Navegacion,Nav-Link-3,Enlace,Contacto,15,Salto al formulario de contacto
+5,Inicio,Navegacion,Nav-Link-4,Enlace,EIA,15,Desplegable al caso de estudio
+6,Inicio,Hero,Hero-Kicker,Badge/Pill,ARQUITECTURA & TRANSFORMACIÓN OPERATIVA,45,Kicker superior con ícono de destello
+7,Inicio,Hero,Hero-H1,Título H1,"Evolución Digital con Rigor Metodológico y Visión Directiva",80,Título de alto impacto para C-Level y dueños de pymes
+8,Inicio,Hero,Hero-Lead,Párrafo Lead,"Acompañamos a directores y gerencias a resolver la complejidad operativa: diagnóstico de circuitos, diseño de arquitectura de sistemas y selección independiente de tecnología.",220,Propuesta de valor clara sin tecnicismos excesivos
+9,Inicio,Hero,Hero-CTA-Primary,Botón,Explorar Caso EIA,30,Llamado a la acción principal
+10,Inicio,Hero,Hero-CTA-Secondary,Botón,Conocer Metodología,30,Llamado a la acción secundario
+11,Inicio,Hero,Hero-Card-Badge,Badge,Caso de Estudio Real,25,Etiqueta del gráfico interactivo
+12,Inicio,Hero,Hero-Card-Title,Subtítulo,Transformación Operativa EIA,40,Título de la tarjeta visual
+13,Inicio,Hero,Hero-Card-Metric-1,Métrica,100% Sin desarrollo a medida,30,Diferencial de adopción rápida
+14,Inicio,Hero,Hero-Card-Metric-2,Métrica,72.2% Eficiencia RFP,25,Puntaje del pliego licitatorio
+15,Inicio,Credenciales,Cred-Kicker,Kicker,ENFOQUE METODOLÓGICO Y CAPACIDAD CONSULTORA,50,Barra de credibilidad y rigor
+16,Inicio,Credenciales,Cred-Item-1,Texto,Diagnóstico Operativo MoSCoW,35,Pilar metodológico 1
+17,Inicio,Credenciales,Cred-Item-2,Texto,Arquitectura Empresarial en 4 Capas,40,Pilar metodológico 2
+18,Inicio,Credenciales,Cred-Item-3,Texto,Evaluación Multicriterio RFP,35,Pilar metodológico 3
+19,Inicio,Credenciales,Cred-Item-4,Texto,Modelo TCO a 3 Años,30,Pilar metodológico 4
+20,Inicio,Equipo,Equipo-Kicker,Badge/Pill,Presentación del Equipo,30,Kicker de la sección
+21,Inicio,Equipo,Equipo-H2,Título H2,"Liderazgo Ejecutivo y Capacidad de Ejecución",60,Título que transmite experiencia senior
+22,Inicio,Equipo,Equipo-Lead,Párrafo,"Un equipo multidisciplinario con trayectoria probada en consultoría estratégica, arquitectura de software corporativo y gestión del cambio organizacional.",180,Presentación del valor de los perfiles
+23,Inicio,Equipo,Card-1-Name,Nombre,Lic. Sofía Albarracín,30,Socia Líder
+24,Inicio,Equipo,Card-1-Role,Cargo,Socia Líder · Estrategia & Diagnóstico,40,Rol ejecutivo
+25,Inicio,Equipo,Card-1-Bio,Bio,"Especialista en diagnóstico de madurez operativa CMM, relevamiento de procesos críticos y alineación con objetivos de negocio del directorio.",160,Descripción del consultor 1
+26,Inicio,Equipo,Card-2-Name,Nombre,Ing. Martín Benítez,30,Arquitecto de Soluciones
+27,Inicio,Equipo,Card-2-Role,Cargo,Arquitecto de Soluciones · Sistemas & TI,40,Rol técnico senior
+28,Inicio,Equipo,Card-2-Bio,Bio,"Más de 14 años diseñando arquitecturas empresariales, integraciones de software de gestión contable y matrices multicriterio de evaluación.",160,Descripción del consultor 2
+29,Inicio,Equipo,Card-3-Name,Nombre,Lic. Elena Rostagno,30,Consultora Senior
+30,Inicio,Equipo,Card-3-Role,Cargo,Consultora Senior · Personas & Gestión del Cambio,45,Rol en cambio cultural
+31,Inicio,Equipo,Card-3-Bio,Bio,"Experta en gestión del cambio, capacitación a colaboradores y diseño de experiencias operativas sin fricción ni resistencia tecnológica.",160,Descripción del consultor 3
+32,Inicio,Equipo,Card-4-Name,Nombre,Carlos Arenales,30,Director General
+33,Inicio,Equipo,Card-4-Role,Cargo,Director General · Sponsor Ejecutivo,40,Sponsor del cliente
+34,Inicio,Equipo,Card-4-Bio,Bio,"Sponsor ejecutivo del proyecto. Impulsó la transformación cultural y la priorización estratégica del negocio preservando el legado operativo.",160,Descripción del sponsor
+35,Inicio,Framework,Framework-Kicker,Badge/Pill,Metodología Probada,25,Kicker de las tarjetas apilables
+36,Inicio,Framework,Framework-H2,Título H2,"Las 5 Etapas de Nuestro Método de Trabajo",60,Título de la sección de framework
+37,Inicio,Framework,Framework-Lead,Párrafo,"Un camino secuencial diseñado para minimizar riesgos, reducir costos ocultos y garantizar resultados medibles desde el primer mes.",160,Bajada de las etapas
+38,Inicio,Framework,Card-1-Num,Número,01,5,Etapa 1
+39,Inicio,Framework,Card-1-Title,Título,Entender la Organización,35,Fase 1
+40,Inicio,Framework,Card-1-Desc,Párrafo,"Relevamos los circuitos operativos reales, diagnosticamos el nivel de madurez CMM y definimos qué mantener y qué transformar con rigor MoSCoW.",180,Resumen Fase 1
+41,Inicio,Framework,Card-2-Num,Número,02,5,Etapa 2
+42,Inicio,Framework,Card-2-Title,Título,Definir el Cambio,35,Fase 2
+43,Inicio,Framework,Card-2-Desc,Párrafo,"Diseñamos la arquitectura destino en 4 capas (Negocio, Datos, Aplicaciones, Infraestructura) integrando herramientas ágiles con su ERP contable.",180,Resumen Fase 2
+44,Inicio,Framework,Card-3-Num,Número,03,5,Etapa 3
+45,Inicio,Framework,Card-3-Title,Título,Evaluar Opciones con Objetividad,40,Fase 4
+46,Inicio,Framework,Card-3-Desc,Párrafo,"Construimos pliegos licitatorios (RFP) y evaluamos alternativas del mercado mediante matrices multicriterio y modelos de Costo Total a 3 años (TCO).",180,Resumen Fase 3
+47,Inicio,Framework,Card-4-Num,Número,04,5,Etapa 4
+48,Inicio,Framework,Card-4-Title,Título,Explorar Innovación & IA,35,Fase 5
+49,Inicio,Framework,Card-4-Desc,Párrafo,"Incorporamos soluciones de automatización e Inteligencia Artificial aplicada con supervisión humana (Human-in-the-Loop) para extraer valor sin riesgo.",180,Resumen Fase 4
+50,Inicio,Framework,Card-5-Num,Número,05,5,Etapa 5
+51,Inicio,Framework,Card-5-Title,Título,Cierre & Hoja de Ruta,35,Fase 6
+52,Inicio,Framework,Card-5-Desc,Párrafo,"Trazamos un cronograma secuencial por fases, con presupuesto asignado, mitigación de riesgos y prioridades inmediatas para la toma de decisiones.",180,Resumen Fase 5
+53,Inicio,Contacto,Contacto-Kicker,Badge/Pill,Contacto Directo,25,Kicker del formulario
+54,Inicio,Contacto,Contacto-H2,Título H2,"Iniciemos tu Proyecto de Transformación",60,Título del formulario
+55,Inicio,Contacto,Contacto-Lead,Párrafo,"Completá tus datos para coordinar una sesión de trabajo y diagnóstico preliminar con el equipo directivo de Syntra Consulting:",160,Bajada previa a los campos
+56,Inicio,Contacto,Field-1-Label,Label,Nombre y Apellido *,25,Campo de formulario
+57,Inicio,Contacto,Field-1-Placeholder,Placeholder,Ej. Dora Poceiro,30,Ejemplo orientativo
+58,Inicio,Contacto,Field-2-Label,Label,Empresa / Organización *,30,Campo de formulario
+59,Inicio,Contacto,Field-2-Placeholder,Placeholder,Ej. Emprendimientos Inmobiliarios Arenales S.A.,50,Ejemplo orientativo
+60,Inicio,Contacto,Field-3-Label,Label,Correo Corporativo *,25,Campo de formulario
+61,Inicio,Contacto,Field-3-Placeholder,Placeholder,contacto@empresa.com,30,Ejemplo orientativo
+62,Inicio,Contacto,Field-4-Label,Label,Teléfono,15,Campo de formulario
+63,Inicio,Contacto,Field-4-Placeholder,Placeholder,+54 11 ....,20,Ejemplo orientativo
+64,Inicio,Contacto,Field-5-Label,Label,Consulta o requerimiento *,30,Campo de formulario
+65,Inicio,Contacto,Field-5-Placeholder,Placeholder,Comentanos brevemente la situación operativa o tecnológica de tu empresa...,100,Ejemplo orientativo
+66,Inicio,Contacto,Submit-Button,Botón,Enviar Consulta,25,Botón de envío
+67,Inicio,Contacto,Disclaimer,Texto Legal,"Respuesta confidencial en menos de 24 hs hábiles.",60,Mensaje de confianza
+68,Inicio,Footer,Footer-Desc,Párrafo,"Syntra Consulting es una firma de consultoría especializada creada para impulsar a las organizaciones mediante arquitectura estructurada, tecnología inteligente y ejecución pragmática.",200,Misión resumida
+69,Inicio,Footer,Footer-Copyright,Copyright,"Copyright 2026 · Todos los derechos reservados · Syntra Consulting",80,Pie de página

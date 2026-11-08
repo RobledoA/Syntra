@@ -1,0 +1,125 @@
+{
+  "sitio": "Syntra Consulting",
+  "version": "1.0",
+  "fecha_actualizacion": "2026-11-08",
+  "idioma": "es-AR",
+  "navegacion": {
+    "marca": "Syntra Consulting",
+    "enlaces": [
+      { "id": "nav_inicio", "label": "Inicio", "url": "index.html" },
+      { "id": "nav_equipo", "label": "Equipo", "url": "#equipo" },
+      { "id": "nav_contacto", "label": "Contacto", "url": "#contacto" },
+      { "id": "nav_eia", "label": "EIA", "url": "eia.html" }
+    ]
+  },
+  "pantallas": {
+    "inicio": {
+      "hero": {
+        "kicker": "ARQUITECTURA & TRANSFORMACIÓN OPERATIVA",
+        "titulo_h1": "Evolución Digital con Rigor Metodológico y Visión Directiva",
+        "bajada_lead": "Acompañamos a directores y gerencias a resolver la complejidad operativa: diagnóstico de circuitos, diseño de arquitectura de sistemas y selección independiente de tecnología.",
+        "cta_principal": "Explorar Caso EIA",
+        "cta_secundario": "Conocer Metodología",
+        "tarjeta_visual": {
+          "badge": "Caso de Estudio Real",
+          "titulo": "Transformación Operativa EIA",
+          "subtitulo": "Alquileres Corporativos AAA en Puerto Madero",
+          "metrica_1": { "valor": "100%", "etiqueta": "Sin desarrollo a medida" },
+          "metrica_2": { "valor": "72.2%", "etiqueta": "Eficiencia en RFP" },
+          "status": "Integración con ERP Tango Gestión Preservada"
+        }
+      },
+      "credenciales": {
+        "kicker": "ENFOQUE METODOLÓGICO Y CAPACIDAD CONSULTORA",
+        "pilares": [
+          "Diagnóstico Operativo MoSCoW",
+          "Arquitectura Empresarial en 4 Capas",
+          "Evaluación Multicriterio RFP",
+          "Modelo TCO a 3 Años"
+        ]
+      },
+      "equipo": {
+        "kicker": "Presentación del Equipo",
+        "titulo_h2": "Liderazgo Ejecutivo y Capacidad de Ejecución",
+        "bajada_lead": "Un equipo multidisciplinario con trayectoria probada en consultoría estratégica, arquitectura de software corporativo y gestión del cambio organizacional.",
+        "integrantes": [
+          {
+            "nombre": "Lic. Sofía Albarracín",
+            "rol": "Socia Líder · Estrategia & Diagnóstico",
+            "bio": "Especialista en diagnóstico de madurez operativa CMM, relevamiento de procesos críticos y alineación con objetivos de negocio del directorio."
+          },
+          {
+            "nombre": "Ing. Martín Benítez",
+            "rol": "Arquitecto de Soluciones · Sistemas & TI",
+            "bio": "Más de 14 años diseñando arquitecturas empresariales, integraciones de software de gestión contable y matrices multicriterio de evaluación."
+          },
+          {
+            "nombre": "Lic. Elena Rostagno",
+            "rol": "Consultora Senior · Personas & Gestión del Cambio",
+            "bio": "Experta en gestión del cambio, capacitación a colaboradores y diseño de experiencias operativas sin fricción ni resistencia tecnológica."
+          },
+          {
+            "nombre": "Carlos Arenales",
+            "rol": "Director General · Sponsor Ejecutivo",
+            "bio": "Sponsor ejecutivo del proyecto. Impulsó la transformación cultural y la priorización estratégica del negocio preservando el legado operativo."
+          }
+        ]
+      },
+      "framework_5_etapas": {
+        "kicker": "Metodología Probada",
+        "titulo_h2": "Las 5 Etapas de Nuestro Método de Trabajo",
+        "bajada_lead": "Un camino secuencial diseñado para minimizar riesgos, reducir costos ocultos y garantizar resultados medibles desde el primer mes.",
+        "etapas": [
+          {
+            "numero": "01",
+            "titulo": "Entender la Organización",
+            "descripcion": "Relevamos los circuitos operativos reales, diagnosticamos el nivel de madurez CMM y definimos qué mantener y qué transformar con rigor MoSCoW.",
+            "tags": ["Diagnóstico CMM", "Matriz MoSCoW"]
+          },
+          {
+            "numero": "02",
+            "titulo": "Definir el Cambio",
+            "descripcion": "Diseñamos la arquitectura destino en 4 capas (Negocio, Datos, Aplicaciones, Infraestructura) integrando herramientas ágiles con su ERP contable.",
+            "tags": ["Arquitectura 4 Capas", "SaaS + ERP Tango"]
+          },
+          {
+            "numero": "03",
+            "titulo": "Evaluar Opciones con Objetividad",
+            "descripcion": "Construimos pliegos licitatorios (RFP) y evaluamos alternativas del mercado mediante matrices multicriterio y modelos de Costo Total a 3 años (TCO).",
+            "tags": ["Pliego RFP 77 ítems", "Modelo TCO a 3 Años"]
+          },
+          {
+            "numero": "04",
+            "titulo": "Explorar Innovación & IA",
+            "descripcion": "Incorporamos soluciones de automatización e Inteligencia Artificial aplicada con supervisión humana (Human-in-the-Loop) para extraer valor sin riesgo.",
+            "tags": ["Extracción Inteligente", "Human-in-the-Loop"]
+          },
+          {
+            "numero": "05",
+            "titulo": "Cierre & Hoja de Ruta",
+            "descripcion": "Trazamos un cronograma secuencial por fases, con presupuesto asignado, mitigación de riesgos y prioridades inmediatas para la toma de decisiones.",
+            "tags": ["Roadmap 12 Meses", "4 Prioridades Clave"]
+          }
+        ]
+      },
+      "contacto": {
+        "kicker": "Contacto Directo",
+        "titulo_h2": "Iniciemos tu Proyecto de Transformación",
+        "bajada_lead": "Completá tus datos para coordinar una sesión de trabajo y diagnóstico preliminar con el equipo directivo de Syntra Consulting:",
+        "campos": [
+          { "nombre": "nombre", "label": "Nombre y Apellido *", "placeholder": "Ej. Dora Poceiro" },
+          { "nombre": "empresa", "label": "Empresa / Organización *", "placeholder": "Ej. Emprendimientos Inmobiliarios Arenales S.A." },
+          { "nombre": "email", "label": "Correo Corporativo *", "placeholder": "contacto@empresa.com" },
+          { "nombre": "telefono", "label": "Teléfono", "placeholder": "+54 11 ...." },
+          { "nombre": "consulta", "label": "Consulta o requerimiento *", "placeholder": "Comentanos brevemente la situación operativa o tecnológica de tu empresa..." }
+        ],
+        "boton_enviar": "Enviar Consulta",
+        "nota_confidencialidad": "Respuesta confidencial en menos de 24 hs hábiles."
+      },
+      "footer": {
+        "descripcion": "Syntra Consulting es una firma de consultoría especializada creada para impulsar a las organizaciones mediante arquitectura estructurada, tecnología inteligente y ejecución pragmática.",
+        "copyright": "Copyright 2026 · Todos los derechos reservados · Syntra Consulting"
+      }
+    }
+  }
+}

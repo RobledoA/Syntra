@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="carlos-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDFBF7"/>
+      <stop offset="100%" stop-color="#EBECEF"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" fill="url(#carlos-bg)"/>
+  <!-- Hair back with gray temples -->
+  <path d="M116 115 C116 68 204 68 204 115 C204 135 200 150 196 150 C190 135 130 135 124 150 C120 150 116 135 116 115 Z" fill="#475569"/>
+  <!-- Neck -->
+  <rect x="146" y="152" width="28" height="36" fill="#F0B892" rx="4"/>
+  <!-- Face -->
+  <path d="M124 110 C124 85 196 85 196 110 C196 150 185 168 160 168 C135 168 124 150 124 110 Z" fill="#FCD5B5"/>
+  <!-- Distinguished hair style with subtle silver -->
+  <path d="M116 100 C120 74 150 62 180 64 C202 66 206 82 204 98 C192 86 175 82 158 84 C140 85 126 92 116 100 Z" fill="#334155"/>
+  <path d="M116 110 C118 102 122 96 128 92 C124 100 122 108 122 116 Z" fill="#94A3B8"/>
+  <path d="M204 110 C202 102 198 96 192 92 C196 100 198 108 198 116 Z" fill="#94A3B8"/>
+  <!-- Expression -->
+  <ellipse cx="146" cy="120" rx="3.5" ry="3.5" fill="#1E293B"/>
+  <ellipse cx="174" cy="120" rx="3.5" ry="3.5" fill="#1E293B"/>
+  <path d="M152 144 Q160 150 168 144" fill="none" stroke="#1E293B" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Executive Navy Suit & Terracotta Tie -->
+  <path d="M90 320 L106 205 C114 190 130 184 144 186 L160 210 L176 186 C190 184 206 190 214 205 L230 320 Z" fill="#0F172A"/>
+  <!-- White shirt collar -->
+  <polygon points="144,186 160,215 176,186 160,195" fill="#FFFFFF"/>
+  <!-- Terracotta tie -->
+  <polygon points="156,202 164,202 168,260 160,272 152,260" fill="#A95335"/>
+</svg>
