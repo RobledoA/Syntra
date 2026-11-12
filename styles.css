@@ -1817,7 +1817,10 @@ ul, ol {
   transform: scale(1.06);
 }
 
-.team-acc-pill-name {
+.team-acc-pill-info,
+.team-acc-pill-name,
+.team-acc-pill-role,
+.team-acc-pill-chevron {
   display: none;
 }
 
@@ -1835,9 +1838,17 @@ ul, ol {
   width: 100%;
 }
 
+.team-acc-card:not(.is-active) .team-acc-expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
 .team-acc-card.is-active .team-acc-expanded {
   opacity: 1;
   visibility: visible;
+  position: relative;
 }
 
 .team-acc-photo-col {
@@ -1950,77 +1961,216 @@ ul, ol {
 /* Tablet view */
 @media (max-width: 1024px) {
   .team-accordion {
-    min-height: 430px;
+    min-height: 420px;
+    gap: 12px;
   }
   .team-acc-card {
-    flex: 0 0 64px;
+    flex: 0 0 60px;
   }
   .team-acc-expanded {
     gap: 20px;
     padding: 22px;
-    min-width: 460px;
+    min-width: 440px;
   }
   .team-acc-photo-col {
-    width: 210px;
-    height: 280px;
+    width: 200px;
+    height: 270px;
   }
   .team-acc-quote {
     font-size: 0.95rem;
   }
 }
 
-/* Mobile responsive accordion */
-@media (max-width: 768px) {
+/* Mobile responsive accordion (Clean vertical stacked cards) */
+@media (max-width: 860px) {
   .team-accordion {
     flex-direction: column;
     min-height: auto;
     gap: 12px;
+    margin-top: 32px;
   }
+
   .team-acc-card {
     flex: none;
     width: 100%;
-    min-height: 72px;
-    border-radius: 16px;
+    min-height: auto;
+    border-radius: 18px;
+    box-shadow: 0 2px 10px rgba(15, 23, 42, 0.04);
   }
+
+  .team-acc-card:hover:not(.is-active) {
+    transform: none;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  }
+
   .team-acc-card.is-active {
     flex: none;
-    min-height: auto;
+    box-shadow: 0 8px 24px rgba(169, 83, 53, 0.09);
+    border-color: rgba(169, 83, 53, 0.35);
   }
+
+  /* Pill row acts as touch-friendly accordion header */
   .team-acc-pill {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    min-height: 70px;
+    display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: flex-start;
-    padding: 10px 16px;
+    padding: 12px 16px;
     gap: 14px;
-    border-radius: 16px;
+    border-radius: 18px;
+    background-color: #FFFFFF;
+    transition: background-color 0.25s ease, border-radius 0.25s ease;
+    z-index: 1;
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
   }
+
+  .team-acc-card.is-active .team-acc-pill {
+    background-color: #FFF9F6;
+    border-bottom: 1px solid var(--border-subtle);
+    border-radius: 18px 18px 0 0;
+  }
+
   .team-acc-pill-img {
     position: static;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 12px;
+    object-fit: cover;
+    object-position: center top;
     flex-shrink: 0;
+    border: 1.5px solid rgba(169, 83, 53, 0.2);
+    background: #F8FAFC;
+    transform: none !important;
   }
+
+  .team-acc-pill-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    min-width: 0;
+    text-align: left;
+  }
+
   .team-acc-pill-name {
     display: block;
     font-size: 0.95rem;
     font-weight: 700;
     color: var(--text-main);
+    line-height: 1.3;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-  .team-acc-expanded {
+
+  .team-acc-pill-role {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    line-height: 1.3;
+    margin: 2px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .team-acc-pill-chevron {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #F1F5F9;
+    color: var(--text-main);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.2s ease, color 0.2s ease;
+  }
+
+  .team-acc-card.is-active .team-acc-pill-chevron {
+    transform: rotate(180deg);
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+  }
+
+  /* Expanded container strictly hides inactive cards to eliminate overflow & phantom heights */
+  .team-acc-card:not(.is-active) .team-acc-expanded {
+    display: none !important;
+  }
+
+  .team-acc-card.is-active .team-acc-expanded {
+    display: flex !important;
     flex-direction: column;
+    width: 100%;
     min-width: 0;
-    padding: 20px 18px;
-    gap: 16px;
+    padding: 20px 18px 22px;
+    gap: 18px;
     align-items: stretch;
+    animation: fadeInAcc 0.28s ease-out;
   }
+
   .team-acc-photo-col {
     width: 100%;
-    max-width: 260px;
-    height: 260px;
+    max-width: 240px;
+    height: 240px;
     margin: 0 auto;
+    border-radius: 16px;
   }
+
   .team-acc-content-col {
+    width: 100%;
     min-height: auto;
+  }
+
+  .team-acc-meta-row {
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .team-acc-quote {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0 0 10px 0;
+  }
+
+  .team-acc-bio {
+    font-size: 0.84rem;
+    line-height: 1.6;
+    margin: 0 0 14px 0;
+  }
+
+  .team-acc-author {
+    padding-top: 12px;
+  }
+
+  .team-acc-name {
+    font-size: 1.05rem;
+  }
+
+  .team-acc-role {
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes fadeInAcc {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 

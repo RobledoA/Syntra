@@ -256,7 +256,7 @@ function initMethodologyPopovers() {
   });
 }
 
-/* Horizontal Team Accordion Component */
+/* Horizontal & Mobile Team Accordion Component */
 function initTeamAccordion() {
   const accordion = document.getElementById('teamAccordion');
   if (!accordion) return;
@@ -266,26 +266,46 @@ function initTeamAccordion() {
 
   let activeCard = accordion.querySelector('.team-acc-card.is-active') || cards[0];
 
-  function activateCard(targetCard) {
-    if (activeCard === targetCard) return;
+  function toggleCard(targetCard) {
+    const isMobile = window.innerWidth <= 860;
+
+    // Mobile: tapping an already open card toggles it closed
+    if (isMobile && activeCard === targetCard) {
+      targetCard.classList.remove('is-active');
+      targetCard.setAttribute('aria-expanded', 'false');
+      activeCard = null;
+      return;
+    }
+
     cards.forEach(card => {
       const isActive = card === targetCard;
       card.classList.toggle('is-active', isActive);
       card.setAttribute('aria-expanded', isActive ? 'true' : 'false');
     });
     activeCard = targetCard;
+
+    if (isMobile) {
+      setTimeout(() => {
+        targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
   }
 
   cards.forEach(card => {
-    // Click on card
-    card.addEventListener('click', () => {
-      activateCard(card);
+    // Click on card / pill
+    card.addEventListener('click', (e) => {
+      const isMobile = window.innerWidth <= 860;
+      // On mobile, ignore clicks inside expanded content area (text selection, reading)
+      if (isMobile && e.target.closest('.team-acc-expanded')) {
+        return;
+      }
+      toggleCard(card);
     });
 
     // Hover on desktop
     card.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 768) {
-        activateCard(card);
+      if (window.innerWidth > 860) {
+        toggleCard(card);
       }
     });
 
@@ -293,7 +313,7 @@ function initTeamAccordion() {
     card.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
-        activateCard(card);
+        toggleCard(card);
       }
     });
   });
