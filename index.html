@@ -32,9 +32,9 @@
       <nav class="nav-container" role="navigation" aria-label="Navegación principal">
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link active">Inicio</a></li>
-          <li><a href="#servicios" class="nav-link">Servicios</a></li>
-          <li><a href="#equipo" class="nav-link">Equipo</a></li>
-          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li><a href="index.html#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="index.html#equipo" class="nav-link">Equipo</a></li>
+          <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
           
           <!-- EIA Dropdown Hub -->
           <li class="nav-item-dropdown">
@@ -133,162 +133,170 @@
 
         <div class="consulting-services-grid">
 
-          <!-- Card 1: Enterprise Architecture -->
+          <!-- Card 1: Enterprise Architecture (Conservada tal cual) -->
           <div class="service-card-clean">
             <div class="service-icon-box">
               <i class="fa-solid fa-network-wired"></i>
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
               Arquitectura Empresarial & Sistemas Core
             </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Evaluamos el estado actual (As-Is) bajo marcos CMMI y diseñamos arquitecturas destino (To-Be) en 4 capas (Negocio, Aplicaciones, Datos e Infraestructura). Desacoplamos monolitos legacy e integramos ERPs líderes (SAP, Calipso, Tango) con APIs seguras y eventos en tiempo real.
-            </p>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Diagnóstico de madurez CMMI y relevamiento de procesos As-Is.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Diseño de Arquitectura Destino To-Be en 4 capas (Negocio, Apps, Datos e Infra).</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Desacople de monolitos y modernización de plataformas legacy.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Integración de ERPs líderes (SAP, Calipso, Tango) vía APIs y eventos.</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 2: Cloud & DevOps -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
-              Ingeniería Cloud & Modernización DevOps
-            </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Diseñamos y ejecutamos migraciones hacia infraestructuras elásticas en AWS, Azure y Google Cloud. Automatizamos el aprovisionamiento mediante Infraestructura como Código (Terraform), gestionamos clusters de Kubernetes y construimos pipelines CI/CD con observabilidad y cero downtime.
-            </p>
-          </div>
-
-          <!-- Card 3: RFP & TCO -->
+          <!-- Card 2: Evaluación Tecnológica, RFP & TCO (Conservada tal cual) -->
           <div class="service-card-clean">
             <div class="service-icon-box">
               <i class="fa-solid fa-scale-balanced"></i>
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
               Evaluación Tecnológica, RFP & Análisis TCO
             </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Brindamos consultoría imparcial para la adquisición de plataformas corporativas. Formulamos pliegos de licitación RFP con matrices multicriterio ponderadas (+70 variables) y calculamos el Costo Total de Propiedad (TCO a 3 y 5 años), asegurando la mejor relación costo-beneficio.
-            </p>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Confección de pliegos técnicos y requerimientos funcionales RFP.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Evaluación multicriterio independiente.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Modelado de Costo Total de Propiedad (TCO a 3 y 5 años).</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Negociación técnica imparcial y selección de proveedores SaaS.</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 4: Software Engineering & Integration -->
+          <!-- Card 3: Automatización de Procesos (Nueva) -->
           <div class="service-card-clean">
             <div class="service-icon-box">
-              <i class="fa-solid fa-code"></i>
+              <i class="fa-solid fa-gears"></i>
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
-              Ingeniería de Software & Arquitectura de Integración
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+              Automatización de Procesos & Flujos de Trabajo
             </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Diseñamos y desarrollamos servicios backend, conectores de integración y APIs robustas para comunicar ecosistemas distribuidos. Garantizamos integridad transaccional, trazabilidad de datos y sincronización confiable entre aplicaciones centrales y periféricas.
-            </p>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Mapeo y reingeniería de circuitos operativos manuales y repetitivos.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Diseño de flujos automatizados de aprobación, alertas y validaciones.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Interoperabilidad y sincronización fluida entre sistemas dispares.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Reducción drástica de tiempos de ciclo y eliminación de errores de carga.</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 5: Cybersecurity & Resilience -->
+          <!-- Card 4: Inteligencia Artificial (Nueva) -->
           <div class="service-card-clean">
             <div class="service-icon-box">
-              <i class="fa-solid fa-shield-halved"></i>
+              <i class="fa-solid fa-brain"></i>
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
-              Ciberseguridad, Continuidad & Gobierno IT
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+              Inteligencia Artificial & Soluciones Cognitivas
             </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Protegemos la información y la operatoria corporativa mediante auditorías de vulnerabilidad, esquemas de identidad Zero-Trust, alineación a normativas ISO 27001 / SOC 2 y diseño de planes de contingencia y continuidad ante desastres (Disaster Recovery).
-            </p>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Identificación de casos de uso de IA Generativa con retorno medible.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Protocolos de supervisión humana obligatoria (Human-in-the-Loop).</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Pruebas de concepto técnicas (PoC) y validación de exactitud cuantitativa.</span>
+              </li>
+            </ul>
           </div>
 
-          <!-- Card 6: Change Management -->
+          <!-- Card 5: Asesoramiento Estratégico (Nueva) -->
+          <div class="service-card-clean">
+            <div class="service-icon-box">
+              <i class="fa-solid fa-chess"></i>
+            </div>
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+              Asesoramiento Estratégico & Gobierno de TI
+            </h3>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Consultoría de dirección tecnológica para comités ejecutivos y Directorio.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Alineación de iniciativas de IT con los objetivos estratégicos del negocio.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Marcos de gobernanza corporativa, priorización de proyectos y presupuestos.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Diseño de hojas de ruta de transformación y planes directores de sistemas.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 6: Change Management (Conservada tal cual) -->
           <div class="service-card-clean">
             <div class="service-icon-box">
               <i class="fa-solid fa-users-gear"></i>
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:10px;">
+            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
               Gestión del Cambio Organizacional & Adopción
             </h3>
-            <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
-              Acompañamos el factor humano de la transformación digital. Elaboramos planes de migración paulatina, programas de capacitación a medida por rol de usuario, documentación de soporte interactiva y métricas de adopción para garantizar una transición sin fricción operativa.
-            </p>
+            <ul class="service-check-list">
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Estrategia de transición y mitigación de fricción operativa en equipos.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Programas de capacitación práctica orientados por roles de usuario.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Elaboración de manuales ejecutivos y guías de soporte interactivo.</span>
+              </li>
+              <li class="service-check-item">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Métricas de adopción tecnológica y ciclos de mejora continua.</span>
+              </li>
+            </ul>
           </div>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- Featured Case Study Spotlight (Emprendimientos Inmobiliarios Arenales S.A.) -->
-    <section class="case-spotlight-section">
-      <div class="container">
-        <div class="case-spotlight-card">
-          <div class="case-spotlight-grid">
-            
-            <!-- Left Column: Story & CTAs -->
-            <div>
-              <span style="font-size:0.8125rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#D39577; display:inline-block; margin-bottom:10px;">
-                <i class="fa-solid fa-trophy" style="margin-right:6px; color:#D4AF37;"></i> Caso de Éxito Destacado · EIA
-              </span>
-              <h2 style="font-size:clamp(1.75rem, 2.7vw, 2.35rem); font-weight:800; color:#FFFFFF; line-height:1.25; margin-bottom:16px;">
-                Transformación Digital en <span style="color:#D39577;">Emprendimientos Inmobiliarios Arenales S.A.</span>
-              </h2>
-              <p style="font-size:0.95rem; color:#CBD5E1; line-height:1.7; margin-bottom:24px;">
-                Administradora de oficinas corporativas de alta gama en los Diques 2 y 3 de <strong>Puerto Madero</strong> (Grupo Madero Este). Syntra Consulting diseñó la arquitectura destino en 4 capas, lideró una evaluación técnica y económica independiente (pliego RFP sobre 77 criterios funcionales) y concretó la integración entre <strong>Tango Gestión ERP</strong> y <strong>Webdox CLM</strong>, garantizando trazabilidad integral y cero renovaciones fuera de término.
-              </p>
-              <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
-                <a href="eia.html" class="btn-primary" style="padding:12px 24px; font-size:0.875rem;">
-                  <span>Explorar Caso de Estudio EIA</span>
-                  <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="1-entender-la-organizacion.html" class="btn-secondary" style="background:transparent; color:#FFFFFF; border-color:rgba(255,255,255,0.25); padding:12px 20px; font-size:0.875rem;">
-                  <span>Fase 01 Diagnóstico</span>
-                </a>
-              </div>
-            </div>
-
-            <!-- Right Column: Clean Project Deliverables (Sin recuadros excesivos) -->
-            <div style="display:flex; flex-direction:column; gap:20px; padding:6px 0;">
-              
-              <div style="display:flex; align-items:flex-start; gap:16px;">
-                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
-                  <i class="fa-solid fa-chart-line"></i>
-                </div>
-                <div>
-                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Diagnóstico Operativo CMMI</div>
-                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Evolución de Nivel 1 (Inicial) a Nivel 3 (Estandarizado) con mapeo completo de actores y resolución de cuellos de botella.</div>
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start; gap:16px;">
-                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
-                  <i class="fa-solid fa-layer-group"></i>
-                </div>
-                <div>
-                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Arquitectura Empresarial en 4 Capas</div>
-                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Modelado estructurado de Negocio, Aplicaciones, Datos e Infraestructura para eliminar silos operativos.</div>
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start; gap:16px;">
-                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
-                  <i class="fa-solid fa-scale-balanced"></i>
-                </div>
-                <div>
-                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Matriz RFP & Selección de Software</div>
-                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Evaluación objetiva sobre 77 requerimientos ponderados y proyección de TCO a 3 años entre SaaS vs. desarrollo propio.</div>
-                </div>
-              </div>
-
-              <div style="display:flex; align-items:flex-start; gap:16px;">
-                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
-                  <i class="fa-solid fa-network-wired"></i>
-                </div>
-                <div>
-                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Integración Tango Gestión + Webdox CLM</div>
-                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Sincronización transaccional de ~40 contratos comerciales activos sin inconsistencias ni pérdidas de facturación.</div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
         </div>
       </div>
     </section>
@@ -442,70 +450,271 @@
           </p>
         </div>
 
-        <div class="team-grid">
+        <div class="team-accordion" id="teamAccordion">
           
-          <!-- Nicolas Galarza -->
-          <div class="team-card">
-            <div class="team-photo-wrap">
-              <img src="assets/avatar_nicolas.svg" alt="Ilustración Nicolas Galarza · Principal Legacy Code Exorcist" loading="lazy">
+          <!-- Consultant 1 (Nicolas Galarza - Active por defecto) -->
+          <article class="team-acc-card is-active" data-index="0" tabindex="0" role="button" aria-expanded="true">
+            <div class="team-acc-pill">
+              <img src="assets/avatar_nicolas.svg" alt="Nicolas Galarza" class="team-acc-pill-img" loading="lazy">
+              <span class="team-acc-pill-name">Nicolas Galarza</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Nicolas Galarza</h3>
-              <p class="team-role">Principal Legacy Code Exorcist & Technical Debt Collector</p>
-              <p class="team-bio">Especialista en negociar con bases de datos en COBOL, exorcizar dependencias huérfanas en npm y certificar que la deuda técnica acumulada desde 2008 es en realidad "patrimonio arquitectónico corporativo".</p>
+            <div class="team-acc-expanded">
+              <div class="team-acc-photo-col">
+                <img src="assets/avatar_nicolas.svg" alt="Nicolas Galarza" class="team-acc-photo" loading="lazy">
+              </div>
+              <div class="team-acc-content-col">
+                <div class="team-acc-meta-row">
+                  <div class="team-acc-badge">
+                    <img src="assets/logo-symbol.svg" alt="Syntra" class="team-acc-badge-icon">
+                    <span>Syntra Advisory</span>
+                  </div>
+                  <div class="team-acc-domain">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>Arquitectura Legacy & COBOL</span>
+                  </div>
+                </div>
+                <blockquote class="team-acc-quote">
+                  "Si el código legacy compila sin tirar segmentation fault en producción, no se refactoriza: se le prende una vela y se documenta como 'diseño intencional'."
+                </blockquote>
+                <p class="team-acc-bio">
+                  Especialista en negociar con bases de datos en COBOL, exorcizar dependencias huérfanas en npm y certificar que la deuda técnica acumulada desde 2008 es en realidad "patrimonio arquitectónico corporativo".
+                </p>
+                <div class="team-acc-author">
+                  <h3 class="team-acc-name">Nicolas Galarza</h3>
+                  <p class="team-acc-role">Principal Legacy Code Exorcist & Technical Debt Collector</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Gustavo Vergara -->
-          <div class="team-card">
-            <div class="team-photo-wrap">
-              <img src="assets/avatar_gustavo.svg" alt="Ilustración Gustavo Vergara · Head of Chaos Engineering" loading="lazy">
+          <!-- Consultant 2 (Gustavo Vergara) -->
+          <article class="team-acc-card" data-index="1" tabindex="0" role="button" aria-expanded="false">
+            <div class="team-acc-pill">
+              <img src="assets/avatar_gustavo.svg" alt="Gustavo Vergara" class="team-acc-pill-img" loading="lazy">
+              <span class="team-acc-pill-name">Gustavo Vergara</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Gustavo Vergara</h3>
-              <p class="team-role">Head of Chaos Engineering & Production Hotfix Shaman</p>
-              <p class="team-bio">Domador oficial del botón "Deploy a Producción en Viernes 18:00 hs". Experto en apagar incidentes P0 en vivo mediante rezos a AWS, cafeína de origen dudoso y scripts bash sin tests que milagrosamente no rompen nada.</p>
+            <div class="team-acc-expanded">
+              <div class="team-acc-photo-col">
+                <img src="assets/avatar_gustavo.svg" alt="Gustavo Vergara" class="team-acc-photo" loading="lazy">
+              </div>
+              <div class="team-acc-content-col">
+                <div class="team-acc-meta-row">
+                  <div class="team-acc-badge">
+                    <img src="assets/logo-symbol.svg" alt="Syntra" class="team-acc-badge-icon">
+                    <span>Syntra Advisory</span>
+                  </div>
+                  <div class="team-acc-domain">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Chaos Engineering & Cloud</span>
+                  </div>
+                </div>
+                <blockquote class="team-acc-quote">
+                  "El deploy en viernes a las 18:00 hs no es una mala práctica de DevOps; es una prueba de fe en el universo y en la resiliencia de AWS."
+                </blockquote>
+                <p class="team-acc-bio">
+                  Domador oficial del botón 'Deploy a Producción en Viernes'. Experto en apagar incidentes P0 en vivo mediante rezos a la nube, cafeína de origen dudoso y scripts bash sin tests que milagrosamente no rompen nada.
+                </p>
+                <div class="team-acc-author">
+                  <h3 class="team-acc-name">Gustavo Vergara</h3>
+                  <p class="team-acc-role">Head of Chaos Engineering & Production Hotfix Shaman</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Germán Miño -->
-          <div class="team-card">
-            <div class="team-photo-wrap">
-              <img src="assets/avatar_german.svg" alt="Ilustración Germán Miño · Executive Kubernetes Whisperer" loading="lazy">
+          <!-- Consultant 3 (Germán Miño) -->
+          <article class="team-acc-card" data-index="2" tabindex="0" role="button" aria-expanded="false">
+            <div class="team-acc-pill">
+              <img src="assets/avatar_german.svg" alt="Germán Miño" class="team-acc-pill-img" loading="lazy">
+              <span class="team-acc-pill-name">Germán Miño</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Germán Miño</h3>
-              <p class="team-role">Executive Kubernetes Whisperer & Lead YAML Wrangler</p>
-              <p class="team-bio">Su vocación es transformar una consulta SQL de dos líneas en un cluster distribuido de 14 microservicios, 3 capas de caché Redis y 1.200 líneas de configuración YAML que solo él puede compilar mentalmente.</p>
+            <div class="team-acc-expanded">
+              <div class="team-acc-photo-col">
+                <img src="assets/avatar_german.svg" alt="Germán Miño" class="team-acc-photo" loading="lazy">
+              </div>
+              <div class="team-acc-content-col">
+                <div class="team-acc-meta-row">
+                  <div class="team-acc-badge">
+                    <img src="assets/logo-symbol.svg" alt="Syntra" class="team-acc-badge-icon">
+                    <span>Syntra Advisory</span>
+                  </div>
+                  <div class="team-acc-domain">
+                    <i class="fa-solid fa-cubes"></i>
+                    <span>Kubernetes & YAML Mastery</span>
+                  </div>
+                </div>
+                <blockquote class="team-acc-quote">
+                  "¿Por qué resolver un problema con una sola query SQL cuando podés orquestar 14 microservicios en 3 zonas de disponibilidad con service mesh?"
+                </blockquote>
+                <p class="team-acc-bio">
+                  Su vocación es transformar una consulta de dos líneas en un cluster distribuido con 3 capas de caché Redis y 1.200 líneas de configuración YAML que solo él puede compilar mentalmente.
+                </p>
+                <div class="team-acc-author">
+                  <h3 class="team-acc-name">Germán Miño</h3>
+                  <p class="team-acc-role">Executive Kubernetes Whisperer & Lead YAML Wrangler</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Diego Escobar -->
-          <div class="team-card">
-            <div class="team-photo-wrap">
-              <img src="assets/avatar_diego.svg" alt="Ilustración Diego Escobar · Senior Bug-to-Feature Transmutation Strategist" loading="lazy">
+          <!-- Consultant 4 (Diego Escobar) -->
+          <article class="team-acc-card" data-index="3" tabindex="0" role="button" aria-expanded="false">
+            <div class="team-acc-pill">
+              <img src="assets/avatar_diego.svg" alt="Diego Escobar" class="team-acc-pill-img" loading="lazy">
+              <span class="team-acc-pill-name">Diego Escobar</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Diego Escobar</h3>
-              <p class="team-role">Senior Bug-to-Feature Transmutation Strategist & Jira Ninja</p>
-              <p class="team-bio">Cinturón negro en convencer a clientes corporativos de que los fallos del sistema son en realidad "funcionalidades sorpresa no documentadas". Maestro en mover 45 tickets directamente a "Done" 5 minutos antes de la sprint review.</p>
+            <div class="team-acc-expanded">
+              <div class="team-acc-photo-col">
+                <img src="assets/avatar_diego.svg" alt="Diego Escobar" class="team-acc-photo" loading="lazy">
+              </div>
+              <div class="team-acc-content-col">
+                <div class="team-acc-meta-row">
+                  <div class="team-acc-badge">
+                    <img src="assets/logo-symbol.svg" alt="Syntra" class="team-acc-badge-icon">
+                    <span>Syntra Advisory</span>
+                  </div>
+                  <div class="team-acc-domain">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    <span>QA & Bug Transmutation</span>
+                  </div>
+                </div>
+                <blockquote class="team-acc-quote">
+                  "No es un bug crítico de producción en facturación; es una funcionalidad sorpresa diseñada para estimular la paciencia y curiosidad del usuario."
+                </blockquote>
+                <p class="team-acc-bio">
+                  Cinturón negro en convencer a sponsors de que las fallas del sistema son comportamientos deseados. Maestro en mover 45 tickets directamente a 'Done' 5 minutos antes de la sprint review.
+                </p>
+                <div class="team-acc-author">
+                  <h3 class="team-acc-name">Diego Escobar</h3>
+                  <p class="team-acc-role">Senior Bug-to-Feature Transmutation Strategist & Jira Ninja</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
-          <!-- Alan Robledo -->
-          <div class="team-card">
-            <div class="team-photo-wrap">
-              <img src="assets/avatar_alan.svg" alt="Ilustración Alan Robledo · Chief Cloud Strategist" loading="lazy">
+          <!-- Consultant 5 (Alan Robledo) -->
+          <article class="team-acc-card" data-index="4" tabindex="0" role="button" aria-expanded="false">
+            <div class="team-acc-pill">
+              <img src="assets/avatar_alan.svg" alt="Alan Robledo" class="team-acc-pill-img" loading="lazy">
+              <span class="team-acc-pill-name">Alan Robledo</span>
             </div>
-            <div class="team-info">
-              <h3 class="team-name">Alan Robledo</h3>
-              <p class="team-role">Chief Cloud Strategist & Enterprise Synergy Evangelist</p>
-              <p class="team-bio">Especialista en alinear la arquitectura cloud con los objetivos del negocio, resolver caídas globales de producción apagando y prendiendo el router general, y transformar cualquier incidencia operativa en una "oportunidad de refactorización".</p>
+            <div class="team-acc-expanded">
+              <div class="team-acc-photo-col">
+                <img src="assets/avatar_alan.svg" alt="Alan Robledo" class="team-acc-photo" loading="lazy">
+              </div>
+              <div class="team-acc-content-col">
+                <div class="team-acc-meta-row">
+                  <div class="team-acc-badge">
+                    <img src="assets/logo-symbol.svg" alt="Syntra" class="team-acc-badge-icon">
+                    <span>Syntra Advisory</span>
+                  </div>
+                  <div class="team-acc-domain">
+                    <i class="fa-solid fa-cloud-bolt"></i>
+                    <span>Cloud Strategy & Sinergia TI</span>
+                  </div>
+                </div>
+                <blockquote class="team-acc-quote">
+                  "Apagar y prender la instancia soluciona el 99% de las incidencias operativas; para el 1% restante, armamos una reunión de 3 horas con café."
+                </blockquote>
+                <p class="team-acc-bio">
+                  Especialista en alinear la visión cloud con los objetivos estratégicos del Directorio, resolver caídas globales apagando y prendiendo el router general, y transformar cualquier incidencia en una 'oportunidad de refactorización'.
+                </p>
+                <div class="team-acc-author">
+                  <h3 class="team-acc-name">Alan Robledo</h3>
+                  <p class="team-acc-role">Chief Cloud Strategist & Enterprise Synergy Evangelist</p>
+                </div>
+              </div>
             </div>
-          </div>
+          </article>
 
         </div>
 
+      </div>
+    </section>
+
+    <!-- Featured Case Study Spotlight (Emprendimientos Inmobiliarios Arenales S.A.) -->
+    <section class="case-spotlight-section">
+      <div class="container">
+        <div class="case-spotlight-card">
+          <div class="case-spotlight-grid">
+            
+            <!-- Left Column: Story & CTAs -->
+            <div>
+              <div style="display:flex; align-items:center; gap:16px; margin-bottom:18px;">
+                <div style="background:#FFFFFF; padding:10px 18px; border-radius:14px; box-shadow:0 6px 20px rgba(0,0,0,0.22); display:inline-flex; align-items:center; justify-content:center;">
+                  <img src="assets/madero-calidad.png" alt="Logo Grupo Madero Este · EIA" style="height:52px; width:auto; object-fit:contain; display:block;">
+                </div>
+                <div>
+                  <span style="font-size:0.8125rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#D39577; display:block;">
+                    <i class="fa-solid fa-trophy" style="margin-right:6px; color:#D4AF37;"></i> Caso de Éxito Destacado · EIA
+                  </span>
+                  <span style="font-size:0.875rem; color:#94A3B8; font-weight:600;">Grupo Madero Este · Puerto Madero</span>
+                </div>
+              </div>
+              <h2 style="font-size:clamp(1.75rem, 2.7vw, 2.35rem); font-weight:800; color:#FFFFFF; line-height:1.25; margin-bottom:16px;">
+                Transformación Digital en <span style="color:#D39577;">Emprendimientos Inmobiliarios Arenales S.A.</span>
+              </h2>
+              <p style="font-size:0.95rem; color:#CBD5E1; line-height:1.7; margin-bottom:24px;">
+                Administradora de oficinas corporativas de alta gama en los Diques 2 y 3 de <strong>Puerto Madero</strong> (Grupo Madero Este). Syntra Consulting diseñó la arquitectura destino en 4 capas, lideró una evaluación técnica y económica independiente (pliego RFP sobre 77 criterios funcionales) y concretó la integración entre <strong>Tango Gestión ERP</strong> y <strong>Webdox CLM</strong>, garantizando trazabilidad integral y cero renovaciones fuera de término.
+              </p>
+              <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+                <a href="eia.html" class="btn-primary" style="padding:12px 24px; font-size:0.875rem;">
+                  <span>Explorar Caso de Estudio EIA</span>
+                  <span class="arrow"><i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+                <a href="1-entender-la-organizacion.html" class="btn-secondary" style="background:transparent; color:#FFFFFF; border-color:rgba(255,255,255,0.25); padding:12px 20px; font-size:0.875rem;">
+                  <span>Fase 01 Diagnóstico</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column: Clean Project Deliverables (Sin recuadros excesivos) -->
+            <div style="display:flex; flex-direction:column; gap:20px; padding:6px 0;">
+              
+              <div style="display:flex; align-items:flex-start; gap:16px;">
+                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
+                  <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Diagnóstico Operativo CMMI</div>
+                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Evolución de Nivel 1 (Inicial) a Nivel 3 (Estandarizado) con mapeo completo de actores y resolución de cuellos de botella.</div>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:16px;">
+                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
+                  <i class="fa-solid fa-layer-group"></i>
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Arquitectura Empresarial en 4 Capas</div>
+                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Modelado estructurado de Negocio, Aplicaciones, Datos e Infraestructura para eliminar silos operativos.</div>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:16px;">
+                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Matriz RFP & Selección de Software</div>
+                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Evaluación objetiva sobre 77 requerimientos ponderados y proyección de TCO a 3 años entre SaaS vs. desarrollo propio.</div>
+                </div>
+              </div>
+
+              <div style="display:flex; align-items:flex-start; gap:16px;">
+                <div style="width:42px; height:42px; border-radius:10px; background:rgba(211,149,119,0.15); display:flex; align-items:center; justify-content:center; color:#D39577; font-size:1.15rem; flex-shrink:0;">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <div>
+                  <div style="font-weight:700; font-size:1rem; color:#FFFFFF;">Integración Tango Gestión + Webdox CLM</div>
+                  <div style="font-size:0.875rem; color:#94A3B8; margin-top:3px; line-height:1.5;">Sincronización transaccional de ~40 contratos comerciales activos sin inconsistencias ni pérdidas de facturación.</div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
       </div>
     </section>
 

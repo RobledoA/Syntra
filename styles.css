@@ -875,6 +875,31 @@ ul, ol {
   transform: scale(1.05);
 }
 
+.service-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84375rem;
+  color: var(--text-body);
+  line-height: 1.45;
+}
+
+.service-check-item i {
+  color: var(--primary-blue);
+  font-size: 0.8125rem;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
 /* ==========================================================================
    Case Study Spotlight Section (EIA Showcase)
    ========================================================================== */
@@ -1714,6 +1739,289 @@ ul, ol {
   font-size: 0.8125rem;
   color: var(--text-body);
   line-height: 1.5;
+}
+
+/* ==========================================================================
+   Horizontal Team Accordion (Interactive Expandable Cards)
+   ========================================================================== */
+.team-accordion {
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  width: 100%;
+  min-height: 410px;
+  margin-top: 48px;
+  position: relative;
+}
+
+.team-acc-card {
+  position: relative;
+  border-radius: 22px;
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
+  overflow: hidden;
+  cursor: pointer;
+  flex: 0 0 76px;
+  transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  user-select: none;
+}
+
+.team-acc-card:hover:not(.is-active) {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(169, 83, 53, 0.14);
+  border-color: rgba(169, 83, 53, 0.35);
+}
+
+.team-acc-card.is-active {
+  flex: 1 1 650px;
+  cursor: default;
+  box-shadow: 0 16px 45px rgba(15, 23, 42, 0.08);
+  border-color: rgba(169, 83, 53, 0.25);
+  transform: none;
+}
+
+/* Collapsed Vertical Pill */
+.team-acc-pill {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+  background-color: #F8FAFC;
+}
+
+.team-acc-card.is-active .team-acc-pill {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.team-acc-pill-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  transition: transform 0.4s ease;
+}
+
+.team-acc-card:hover .team-acc-pill-img {
+  transform: scale(1.06);
+}
+
+.team-acc-pill-name {
+  display: none;
+}
+
+/* Expanded View */
+.team-acc-expanded {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  height: 100%;
+  padding: 28px 36px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease 0.12s;
+  min-width: 560px;
+  width: 100%;
+}
+
+.team-acc-card.is-active .team-acc-expanded {
+  opacity: 1;
+  visibility: visible;
+}
+
+.team-acc-photo-col {
+  width: 270px;
+  height: 330px;
+  flex-shrink: 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #F8FAFC;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.team-acc-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+.team-acc-content-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 310px;
+}
+
+.team-acc-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.team-acc-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.team-acc-badge-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.team-acc-domain {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #64748B;
+  background: #F8FAFC;
+  padding: 4px 12px;
+  border-radius: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.team-acc-domain i {
+  color: var(--primary-blue);
+  font-size: 0.85rem;
+}
+
+.team-acc-quote {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-main);
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  font-style: italic;
+  position: relative;
+}
+
+.team-acc-bio {
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text-body);
+  margin: 0 0 16px 0;
+}
+
+.team-acc-author {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.team-acc-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin: 0 0 2px 0;
+}
+
+.team-acc-role {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  margin: 0;
+}
+
+/* Tablet view */
+@media (max-width: 1024px) {
+  .team-accordion {
+    min-height: 430px;
+  }
+  .team-acc-card {
+    flex: 0 0 64px;
+  }
+  .team-acc-expanded {
+    gap: 20px;
+    padding: 22px;
+    min-width: 460px;
+  }
+  .team-acc-photo-col {
+    width: 210px;
+    height: 280px;
+  }
+  .team-acc-quote {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile responsive accordion */
+@media (max-width: 768px) {
+  .team-accordion {
+    flex-direction: column;
+    min-height: auto;
+    gap: 12px;
+  }
+  .team-acc-card {
+    flex: none;
+    width: 100%;
+    min-height: 72px;
+    border-radius: 16px;
+  }
+  .team-acc-card.is-active {
+    flex: none;
+    min-height: auto;
+  }
+  .team-acc-pill {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 10px 16px;
+    gap: 14px;
+    border-radius: 16px;
+  }
+  .team-acc-pill-img {
+    position: static;
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .team-acc-pill-name {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-main);
+  }
+  .team-acc-expanded {
+    flex-direction: column;
+    min-width: 0;
+    padding: 20px 18px;
+    gap: 16px;
+    align-items: stretch;
+  }
+  .team-acc-photo-col {
+    width: 100%;
+    max-width: 260px;
+    height: 260px;
+    margin: 0 auto;
+  }
+  .team-acc-content-col {
+    min-height: auto;
+  }
 }
 
 /* ==========================================================================

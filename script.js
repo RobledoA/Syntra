@@ -6,7 +6,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initHeaderScroll();
+  initNavSmoothScroll();
   initNewsletterToast();
+  initTeamAccordion();
   initEiaAccordion();
   initAnnexToggles();
   initMethodologyPopovers();
@@ -107,6 +109,26 @@ function initHeaderScroll() {
       header.classList.remove('is-scrolled');
     }
   });
+}
+
+/* Cross-page Smooth Anchor Scrolling */
+function initNavSmoothScroll() {
+  const path = window.location.pathname;
+  const isIndex = path.endsWith('index.html') || path.endsWith('/') || path === '' || !path.includes('.html');
+  if (isIndex) {
+    document.querySelectorAll('a[href*="index.html#"]').forEach(anchor => {
+      anchor.addEventListener('click', (e) => {
+        const href = anchor.getAttribute('href');
+        const hash = href.substring(href.indexOf('#'));
+        const targetElem = document.querySelector(hash);
+        if (targetElem) {
+          e.preventDefault();
+          targetElem.scrollIntoView({ behavior: 'smooth' });
+          history.pushState(null, null, hash);
+        }
+      });
+    });
+  }
 }
 
 /* Newsletter Submit Feedback */
@@ -229,6 +251,49 @@ function initMethodologyPopovers() {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && popover.classList.contains('is-open')) {
         togglePopover(false);
+      }
+    });
+  });
+}
+
+/* Horizontal Team Accordion Component */
+function initTeamAccordion() {
+  const accordion = document.getElementById('teamAccordion');
+  if (!accordion) return;
+
+  const cards = accordion.querySelectorAll('.team-acc-card');
+  if (!cards.length) return;
+
+  let activeCard = accordion.querySelector('.team-acc-card.is-active') || cards[0];
+
+  function activateCard(targetCard) {
+    if (activeCard === targetCard) return;
+    cards.forEach(card => {
+      const isActive = card === targetCard;
+      card.classList.toggle('is-active', isActive);
+      card.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    });
+    activeCard = targetCard;
+  }
+
+  cards.forEach(card => {
+    // Click on card
+    card.addEventListener('click', () => {
+      activateCard(card);
+    });
+
+    // Hover on desktop
+    card.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768) {
+        activateCard(card);
+      }
+    });
+
+    // Keyboard support
+    card.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        activateCard(card);
       }
     });
   });
