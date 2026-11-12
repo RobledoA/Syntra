@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="nico-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022C22"/>
+      <stop offset="60%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#134E4A"/>
+    </linearGradient>
+    <linearGradient id="nico-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#065F46" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="nico-hoodie" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="nico-hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#374151"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <filter id="nico-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="320" height="320" rx="20" fill="url(#nico-bg)"/>
+  <circle cx="160" cy="140" r="115" fill="url(#nico-glow)"/>
+  <circle cx="160" cy="140" r="114" fill="none" stroke="#10B981" stroke-width="1.5" stroke-dasharray="3 5" opacity="0.45"/>
+
+  <!-- Subtle Terminal Code Symbols -->
+  <text x="50" y="85" font-family="monospace" font-size="14" fill="#10B981" opacity="0.4">&lt;/&gt;</text>
+  <text x="245" y="90" font-family="monospace" font-size="14" fill="#10B981" opacity="0.4">0x7F</text>
+  <circle cx="70" cy="115" r="2" fill="#34D399" opacity="0.6"/>
+
+  <!-- Character Group -->
+  <g id="character" filter="url(#nico-shadow)">
+    <!-- Shoulders & Dark Tech Hoodie -->
+    <path d="M68 320 C72 250 108 226 142 222 L142 265 L178 265 L178 222 C212 226 248 250 252 320 Z" fill="url(#nico-hoodie)"/>
+    <!-- Hoodie Hood collar curve -->
+    <path d="M110 240 C125 215 140 210 160 210 C180 210 195 215 210 240 C195 255 160 262 125 255 Z" fill="#334155"/>
+    <path d="M128 245 C140 230 160 228 172 230 C185 233 192 245 192 245 C180 255 140 255 128 245 Z" fill="#0F172A"/>
+    <!-- Neon green zipper / detail -->
+    <line x1="160" y1="248" x2="160" y2="320" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Inner shirt -->
+    <polygon points="146,220 160,242 174,220" fill="#022C22"/>
+
+    <!-- Neck -->
+    <path d="M142 182 L142 225 C142 232 178 232 178 225 L178 182 Z" fill="#F2BA95"/>
+    <path d="M142 210 C152 220 168 220 178 210 L178 222 C168 228 152 228 142 222 Z" fill="#D99B77"/>
+
+    <!-- Head & Ears -->
+    <ellipse cx="118" cy="165" rx="8" ry="14" fill="#F2BA95"/>
+    <ellipse cx="118" cy="165" rx="4" ry="8" fill="#D99B77"/>
+    <ellipse cx="202" cy="165" rx="8" ry="14" fill="#F2BA95"/>
+    <ellipse cx="202" cy="165" rx="4" ry="8" fill="#D99B77"/>
+
+    <!-- Face Contour -->
+    <path d="M122 138 C122 102 198 102 198 138 C198 184 188 208 160 208 C132 208 122 184 122 138 Z" fill="#FBD8BD"/>
+
+    <!-- Full Styled Hair with Side Texture -->
+    <path d="M116 138 C114 104 128 72 160 70 C194 72 206 100 204 135 C196 100 180 84 160 84 C136 84 124 105 116 138 Z" fill="url(#nico-hair)"/>
+    <path d="M130 92 C148 78 174 80 190 92 C180 84 165 80 150 82 C138 84 132 88 130 92 Z" fill="#4B5563"/>
+    <!-- Sideburns -->
+    <path d="M120 138 L122 166 L126 166 L124 138 Z" fill="#1F2937"/>
+    <path d="M200 138 L198 166 L194 166 L196 138 Z" fill="#1F2937"/>
+
+    <!-- Eyebrows (Focused, confident) -->
+    <path d="M132 142 Q144 136 153 140" fill="none" stroke="#111827" stroke-width="3.2" stroke-linecap="round"/>
+    <path d="M167 140 Q176 136 188 142" fill="none" stroke="#111827" stroke-width="3.2" stroke-linecap="round"/>
+
+    <!-- Eyes (Sharp Developer Gaze) -->
+    <ellipse cx="144" cy="151" rx="4.5" ry="5" fill="#1E293B"/>
+    <ellipse cx="176" cy="151" rx="4.5" ry="5" fill="#1E293B"/>
+    <circle cx="145.5" cy="149.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="177.5" cy="149.5" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Nose -->
+    <path d="M160 148 L157 166 L163 166" fill="none" stroke="#D99B77" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Neatly Trimmed Beard & Mustache (Legacy Exorcist Style) -->
+    <path d="M148 174 Q160 178 172 174" fill="none" stroke="#1F2937" stroke-width="3" stroke-linecap="round"/>
+    <!-- Jawline beard -->
+    <path d="M124 168 C124 196 140 208 160 208 C180 208 196 196 196 168 C192 188 176 200 160 200 C144 200 128 188 124 168 Z" fill="#1F2937"/>
+    <ellipse cx="160" cy="192" rx="4" ry="3" fill="#111827"/>
+
+    <!-- Smirk -->
+    <path d="M152 182 Q160 187 168 182" fill="none" stroke="#0F172A" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Floating Badge (Exorcist Terminal >_) -->
+  <g transform="translate(225, 235)">
+    <circle cx="20" cy="20" r="20" fill="#0F172A" stroke="#10B981" stroke-width="2"/>
+    <text x="12" y="26" font-family="monospace" font-size="16" font-weight="bold" fill="#10B981">&gt;_</text>
+  </g>
+</svg>

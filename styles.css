@@ -828,6 +828,86 @@ ul, ol {
 /* ==========================================================================
    Metrics & Stats Counter Row (as in About.png & Home.jpg)
    ========================================================================== */
+/* ==========================================================================
+   Consulting Services Grid (What We Do)
+   ========================================================================== */
+.consulting-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.service-card-clean {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+}
+
+.service-card-clean:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-blue);
+  box-shadow: 0 16px 36px rgba(24, 28, 25, 0.08);
+}
+
+.service-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background: var(--primary-blue-muted);
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.service-card-clean:hover .service-icon-box {
+  background: var(--primary-blue);
+  color: #FFFFFF;
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   Case Study Spotlight Section (EIA Showcase)
+   ========================================================================== */
+.case-spotlight-section {
+  padding: 48px 0 64px;
+  background-color: var(--bg-body);
+}
+
+.case-spotlight-card {
+  background: radial-gradient(circle at 85% 15%, #2B3A30 0%, #17201A 60%, #111813 100%);
+  border-radius: var(--radius-xl);
+  padding: clamp(36px, 5vw, 56px);
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(24, 28, 25, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.case-spotlight-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .case-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+}
+
 .stats-section {
   padding: 72px 0;
   background-color: var(--bg-surface);
@@ -1570,9 +1650,15 @@ ul, ol {
    ========================================================================== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 24px;
   margin-top: 48px;
+}
+
+@media (min-width: 1200px) {
+  .team-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 .team-card {

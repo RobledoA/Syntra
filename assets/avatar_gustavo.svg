@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gustavo-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#7C2D12"/>
+    </linearGradient>
+    <linearGradient id="gustavo-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#EF4444" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="gustavo-shirt" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#334155"/>
+    </linearGradient>
+    <linearGradient id="gustavo-hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451A03"/>
+      <stop offset="100%" stop-color="#1C1917"/>
+    </linearGradient>
+    <filter id="gustavo-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="320" height="320" rx="20" fill="url(#gustavo-bg)"/>
+  <circle cx="160" cy="140" r="115" fill="url(#gustavo-glow)"/>
+  <circle cx="160" cy="140" r="114" fill="none" stroke="#F97316" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.45"/>
+
+  <!-- Ambient Chaos & Hotfix Particles -->
+  <circle cx="65" cy="85" r="3" fill="#F97316" opacity="0.7"/>
+  <circle cx="255" cy="75" r="2.5" fill="#EF4444" opacity="0.6"/>
+  <path d="M55 110 L65 110 L75 120" fill="none" stroke="#F97316" stroke-width="1" opacity="0.4"/>
+  <path d="M265 110 L255 110 L245 120" fill="none" stroke="#EF4444" stroke-width="1" opacity="0.4"/>
+
+  <!-- Character Group -->
+  <g id="character" filter="url(#gustavo-shadow)">
+    <!-- Shoulders & Dark Tech Polo -->
+    <path d="M70 320 C74 250 110 230 142 225 L142 270 L178 270 L178 225 C210 230 246 250 250 320 Z" fill="url(#gustavo-shirt)"/>
+    
+    <!-- Polo Collar -->
+    <path d="M128 230 L160 260 L145 285 L120 250 Z" fill="#475569"/>
+    <path d="M192 230 L160 260 L175 285 L200 250 Z" fill="#475569"/>
+    <polygon points="152,240 160,250 168,240 160,230" fill="#F97316"/>
+
+    <!-- Developer Over-Ear Headphones (Around Neck) -->
+    <path d="M110 220 C110 245 130 255 160 255 C190 255 210 245 210 220" fill="none" stroke="#0F172A" stroke-width="10" stroke-linecap="round"/>
+    <path d="M110 220 C110 245 130 255 160 255 C190 255 210 245 210 220" fill="none" stroke="#F97316" stroke-width="2" stroke-linecap="round"/>
+    <!-- Headphone Ear Cushions -->
+    <rect x="102" y="200" width="16" height="26" rx="8" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+    <rect x="202" y="200" width="16" height="26" rx="8" fill="#0F172A" stroke="#475569" stroke-width="1.5"/>
+
+    <!-- Neck -->
+    <path d="M142 182 L142 225 C142 232 178 232 178 225 L178 182 Z" fill="#F4BA94"/>
+    <path d="M142 210 C152 220 168 220 178 210 L178 222 C168 228 152 228 142 222 Z" fill="#DC9672"/>
+
+    <!-- Head & Ears -->
+    <ellipse cx="118" cy="165" rx="8" ry="14" fill="#F4BA94"/>
+    <ellipse cx="118" cy="165" rx="4" ry="8" fill="#DC9672"/>
+    <ellipse cx="202" cy="165" rx="8" ry="14" fill="#F4BA94"/>
+    <ellipse cx="202" cy="165" rx="4" ry="8" fill="#DC9672"/>
+
+    <!-- Face Contour -->
+    <path d="M122 138 C122 102 198 102 198 138 C198 184 186 208 160 208 C134 208 122 184 122 138 Z" fill="#FCD7BD"/>
+
+    <!-- Hair (Spiky Textured Top / Modern Fade) -->
+    <path d="M116 138 C114 105 125 72 160 70 C195 72 206 105 204 138 C196 102 178 84 160 84 C140 84 124 102 116 138 Z" fill="url(#gustavo-hair)"/>
+    <path d="M136 78 L142 68 L150 78 L158 66 L166 78 L174 68 L180 80 Z" fill="#291508"/>
+    <!-- Fade gradient on sides -->
+    <path d="M120 138 L122 162 L125 162 L124 138 Z" fill="#291508"/>
+    <path d="M200 138 L198 162 L195 162 L196 138 Z" fill="#291508"/>
+
+    <!-- Eyebrows (Dynamic & Expressive) -->
+    <path d="M133 140 Q144 134 153 138" fill="none" stroke="#291508" stroke-width="3" stroke-linecap="round"/>
+    <path d="M167 138 Q176 134 187 140" fill="none" stroke="#291508" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Eyes (Energetic & Lively) -->
+    <ellipse cx="144" cy="150" rx="4.5" ry="5" fill="#1C1917"/>
+    <ellipse cx="176" cy="150" rx="4.5" ry="5" fill="#1C1917"/>
+    <circle cx="145.5" cy="148.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="177.5" cy="148.5" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Nose -->
+    <path d="M160 148 L157 166 L163 166" fill="none" stroke="#DC9672" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Clean short designer stubble -->
+    <path d="M136 182 Q160 206 184 182 Q180 198 160 202 Q140 198 136 182 Z" fill="#291508" opacity="0.16"/>
+
+    <!-- Enthusiastic & Confident Smile -->
+    <path d="M148 180 Q160 192 172 180" fill="none" stroke="#1C1917" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Floating Badge (Flame / Hotfix Shaman) -->
+  <g transform="translate(225, 235)">
+    <circle cx="20" cy="20" r="20" fill="#0F172A" stroke="#F97316" stroke-width="2"/>
+    <!-- Fire Icon -->
+    <path d="M20 9 C18 14 14 16 14 21 C14 26 17 29 20 29 C23 29 26 26 26 21 C26 17 23 15 22 13 C22 16 20 18 19 19 C18 17 19 12 20 9 Z" fill="#F97316"/>
+  </g>
+</svg>

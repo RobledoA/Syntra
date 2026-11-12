@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <linearGradient id="diego-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#083344"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#0E7490"/>
+    </linearGradient>
+    <linearGradient id="diego-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#0284C7" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="diego-jacket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="diego-hair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <filter id="diego-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="320" height="320" rx="20" fill="url(#diego-bg)"/>
+  <circle cx="160" cy="140" r="115" fill="url(#diego-glow)"/>
+  <circle cx="160" cy="140" r="114" fill="none" stroke="#06B6D4" stroke-width="1.5" stroke-dasharray="4 6" opacity="0.45"/>
+
+  <!-- Subtle Jira / Agile Sprint Glyphs -->
+  <circle cx="65" cy="80" r="3" fill="#06B6D4" opacity="0.7"/>
+  <circle cx="260" cy="85" r="2.5" fill="#38BDF8" opacity="0.6"/>
+  <path d="M50 100 L65 100 L75 110" fill="none" stroke="#06B6D4" stroke-width="1" opacity="0.4"/>
+  <text x="238" y="112" font-family="monospace" font-size="11" fill="#38BDF8" opacity="0.4">PROD=OK</text>
+
+  <!-- Character Group -->
+  <g id="character" filter="url(#diego-shadow)">
+    <!-- Shoulders & Smart Tech Bomber Jacket -->
+    <path d="M70 320 C74 250 110 230 142 225 L142 270 L178 270 L178 225 C210 230 246 250 250 320 Z" fill="url(#diego-jacket)"/>
+    
+    <!-- Terracotta / Cyan Inner Shirt -->
+    <polygon points="144,222 160,255 176,222" fill="#A95335"/>
+    <polygon points="148,222 160,245 172,222" fill="#0E7490"/>
+
+    <!-- Bomber Jacket Collar -->
+    <path d="M125 228 C135 245 150 255 160 255 C170 255 185 245 195 228 L190 224 C180 238 170 246 160 246 C150 246 140 238 130 224 Z" fill="#334155"/>
+    <line x1="160" y1="255" x2="160" y2="320" stroke="#06B6D4" stroke-width="2.5" stroke-linecap="round"/>
+
+    <!-- Neck -->
+    <path d="M142 182 L142 225 C142 232 178 232 178 225 L178 182 Z" fill="#F4BA94"/>
+    <path d="M142 210 C152 220 168 220 178 210 L178 222 C168 228 152 228 142 222 Z" fill="#DC9773"/>
+
+    <!-- Head & Ears -->
+    <ellipse cx="118" cy="165" rx="8" ry="14" fill="#F4BA94"/>
+    <ellipse cx="118" cy="165" rx="4" ry="8" fill="#DC9773"/>
+    <ellipse cx="202" cy="165" rx="8" ry="14" fill="#F4BA94"/>
+    <ellipse cx="202" cy="165" rx="4" ry="8" fill="#DC9773"/>
+
+    <!-- Face Contour -->
+    <path d="M122 138 C122 102 198 102 198 138 C198 184 186 208 160 208 C134 208 122 184 122 138 Z" fill="#FCD7BD"/>
+
+    <!-- Modern Textured Volume Hair -->
+    <path d="M116 136 C114 100 125 68 160 66 C195 68 206 98 204 135 C196 98 180 82 160 82 C138 82 124 100 116 136 Z" fill="url(#diego-hair)"/>
+    <path d="M124 100 C134 82 152 74 175 74 C194 74 204 88 204 105 C196 92 182 86 168 86 C148 86 134 94 124 100 Z" fill="#475569"/>
+    <!-- Sideburns -->
+    <path d="M120 136 L122 162 L125 162 L124 136 Z" fill="#1E293B"/>
+    <path d="M200 136 L198 162 L195 162 L196 136 Z" fill="#1E293B"/>
+
+    <!-- Eyebrows (Charismatic, slight arch) -->
+    <path d="M133 139 Q144 133 154 138" fill="none" stroke="#0F172A" stroke-width="3" stroke-linecap="round"/>
+    <path d="M166 137 Q177 131 187 137" fill="none" stroke="#0F172A" stroke-width="3.2" stroke-linecap="round"/>
+
+    <!-- Eyes (Bright, confident, subtle wink/smile crinkle) -->
+    <ellipse cx="144" cy="150" rx="4.5" ry="5" fill="#0F172A"/>
+    <ellipse cx="176" cy="150" rx="4.5" ry="5" fill="#0F172A"/>
+    <circle cx="145.5" cy="148.5" r="1.5" fill="#FFFFFF"/>
+    <circle cx="177.5" cy="148.5" r="1.5" fill="#FFFFFF"/>
+
+    <!-- Nose -->
+    <path d="M160 147 L157 165 L164 165" fill="none" stroke="#DC9773" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Clean short designer stubble -->
+    <path d="M136 182 Q160 206 184 182 Q178 198 160 202 Q142 198 136 182 Z" fill="#0F172A" opacity="0.16"/>
+
+    <!-- Confident Smirk (The "It's Not a Bug, It's a Feature" smile) -->
+    <path d="M148 180 Q160 186 173 178" fill="none" stroke="#0F172A" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Bottom Floating Badge (Transmutation Star / Bug to Feature) -->
+  <g transform="translate(225, 235)">
+    <circle cx="20" cy="20" r="20" fill="#0F172A" stroke="#06B6D4" stroke-width="2"/>
+    <!-- Magic Wand / Star Icon -->
+    <path d="M20 10 L22 16 L28 18 L22 20 L20 26 L18 20 L12 18 L18 16 Z" fill="#06B6D4"/>
+    <circle cx="15" cy="26" r="1.5" fill="#38BDF8"/>
+    <circle cx="26" cy="13" r="1" fill="#38BDF8"/>
+  </g>
+</svg>
