@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>5. Explorando innovación · IA y Pipeline EIA · Syntra Consulting</title>
-  <meta name="description" content="Fase 5: Pipeline de IA para Alta Asistida de Contratos, 12 metadatos estructurados, compuerta Human-in-the-Loop y protocolo PoC para EIA.">
+  <meta name="description" content="Fase 5: Asistente de Extracción Documental con IA Generativa, arquitectura Human-in-the-Loop, prototipo con 97,6% de precisión y hoja de ruta para EIA.">
   
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -63,7 +63,7 @@
               </a>
               <a href="6-cierre.html" class="nav-dropdown-item">
                 <i class="fa-solid fa-flag-checkered"></i>
-                <span>6. Cierre & Hoja de Ruta</span>
+                <span>6. Síntesis, Cierre y Hoja de Ruta</span>
               </a>
             </div>
           </li>
@@ -87,18 +87,18 @@
         
         <div>
           <div style="display:inline-flex; align-items:center; gap:14px; background:#FFFFFF; padding:8px 18px; border-radius:14px; border:1px solid var(--border-card); margin-bottom:14px; box-shadow:0 4px 14px rgba(15,23,42,0.06);">
-            <img src="assets/madero-calidad.png" alt="Logo Grupo Madero Este · EIA" style="height:44px; width:auto; object-fit:contain; display:block;">
+            <img src="assets/madero-calidad.png" alt="Logo Madero Este · EIA" style="height:44px; width:auto; object-fit:contain; display:block;">
             <div style="border-left:1px solid var(--border-subtle); padding-left:12px;">
-              <span style="font-size:0.6875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary-blue); display:block;">Caso de Consultoría</span>
-              <strong style="font-size:0.875rem; color:var(--text-main); font-weight:700;">Grupo Madero Este · EIA</strong>
+              <span style="font-size:0.6875rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary-blue); display:block;">Caso de Consultoría Oficial</span>
+              <strong style="font-size:0.875rem; color:var(--text-main); font-weight:700;">Madero Este · EIA</strong>
             </div>
           </div>
           <span class="hero-kicker" style="display:block;">Metodología Syntra · Fase 05</span>
           <h1 class="hero-title" style="margin-top:4px;">
             Explorando innovación
           </h1>
-          <p class="hero-lead" style="max-width:620px; margin-top:14px;">
-            Aplicación práctica de Inteligencia Artificial para EIA: pipeline de extracción asistida de contratos corporativos, compuerta Human-in-the-Loop y protocolo de validación cuantitativa.
+          <p class="hero-lead" style="max-width:680px; margin-top:14px;">
+            Diseño, prototipado y validación de una solución de Inteligencia Artificial Generativa para EIA: Asistente de Extracción Documental, arquitectura Human-in-the-Loop, corpus de prueba y hoja de ruta.
           </p>
         </div>
 
@@ -161,7 +161,7 @@
                       <h4>¿Qué es?</h4>
                     </div>
                     <p>
-                      Una <strong>Prueba de Concepto (PoC)</strong> es un ensayo práctico a escala pequeña para verificar si una tecnología nueva realmente funciona y ahorra tiempo antes de invertir dinero en comprarla.<br><br>
+                      Una <strong>Prueba de Concepto (PoC)</strong> es un ensayo práctico a escala controlada para verificar si una tecnología nueva realmente funciona y ahorra tiempo antes de invertir dinero en comprarla.<br><br>
                       El enfoque <strong>Human-in-the-Loop (Humano en el control)</strong> significa que la Inteligencia Artificial asiste leyendo y completando borradores en segundos, pero la revisión y decisión final siempre queda en manos de una persona.
                     </p>
                   </div>
@@ -218,15 +218,41 @@
               </aside>
             </div>
 
-            <!-- Card 1: Pipeline Visual del Alta Asistida -->
+            <!-- SECCIÓN 1: El Problema y la Oportunidad -->
             <article class="visual-slide-card">
-              <h2 class="visual-slide-title">Pipeline de Alta Asistida con IA</h2>
-              <p class="visual-lead-text">
-                Flujo de procesamiento estructurado para acelerar la carga sin riesgo de alucinación ni fallas de confidencialidad:
-              </p>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                <span style="width:36px; height:36px; border-radius:50%; background:var(--primary-blue); color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; flex-shrink:0;">1</span>
+                <h2 class="visual-slide-title" style="margin:0;">El Problema y la Oportunidad</h2>
+              </div>
+              
+              <!-- Problem / Solution Dual Grid -->
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:16px; margin:20px 0;">
+                
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; border-left:4px solid #DC2626;">
+                  <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                    <i class="fa-solid fa-triangle-exclamation" style="color:#DC2626; font-size:1.1rem;"></i>
+                    <h4 style="margin:0; font-size:0.95rem; color:var(--text-main);">El Problema Operativo</h4>
+                  </div>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.65; margin:0;">
+                    Webdox CLM ordena el ciclo de vida contractual una vez cargado, pero el ingreso inicial sigue siendo manual: <strong>un administrativo lee contratos en prosa jurídica y transcribe sus condiciones</strong>. Esto provoca demoras al facturar y errores que se arrastran durante toda la vigencia del alquiler.
+                  </p>
+                </div>
 
-              <!-- Visual Interactive Pipeline -->
-              <div class="visual-pipeline-row">
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; border-left:4px solid var(--primary-blue);">
+                  <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                    <i class="fa-solid fa-wand-magic-sparkles" style="color:var(--primary-blue); font-size:1.1rem;"></i>
+                    <h4 style="margin:0; font-size:0.95rem; color:var(--text-main);">La Oportunidad de Innovación</h4>
+                  </div>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.65; margin:0;">
+                    La solución propuesta es un <strong>Asistente de Extracción Documental</strong> que transforma el alta de contratos de una tarea de transcripción a una de <strong>validación humana</strong>: toma el contrato firmado, extrae los 18 campos obligatorios, cita textualmente la cláusula de origen y señala datos faltantes, ambiguos o cláusulas atípicas.
+                  </p>
+                </div>
+
+              </div>
+
+              <!-- Pipeline Visual Interactivo -->
+              <h3 style="font-size:1rem; font-weight:700; color:var(--text-main); margin:28px 0 12px;">Pipeline Visual de Procesamiento</h3>
+              <div class="visual-pipeline-row" style="margin-bottom:24px;">
                 
                 <div class="visual-pipeline-step">
                   <div class="visual-pipeline-num">01</div>
@@ -246,14 +272,14 @@
                   <div class="visual-pipeline-num">03</div>
                   <i class="fa-solid fa-brain visual-pipeline-icon"></i>
                   <div class="visual-pipeline-title">Extracción LLM</div>
-                  <div class="visual-pipeline-sub">Extrae 12 campos con cita y página exacta.</div>
+                  <div class="visual-pipeline-sub">Extrae 18 campos con cita y página exacta.</div>
                 </div>
 
                 <div class="visual-pipeline-step human-gate">
                   <div class="visual-pipeline-num"><i class="fa-solid fa-check"></i></div>
                   <i class="fa-solid fa-user-check visual-pipeline-icon"></i>
                   <div class="visual-pipeline-title">Compuerta HITL</div>
-                  <div class="visual-pipeline-sub">Operador valida visualmente en 2 clics.</div>
+                  <div class="visual-pipeline-sub">Operador valida visualmente campo por campo.</div>
                 </div>
 
                 <div class="visual-pipeline-step">
@@ -261,10 +287,35 @@
                   <i class="fa-solid fa-cloud-check visual-pipeline-icon"></i>
                   <div class="visual-pipeline-title">Impacto en ERP</div>
                   <div class="visual-pipeline-sub" style="margin-top:4px;">
-                    Alta confirmada en Webdox + Tango
+                    Alta confirmada en Webdox + Tango (Axoft)
                   </div>
                 </div>
 
+              </div>
+
+              <!-- Ficha de Datos Obligatorios: Los 18 Campos -->
+              <h3 style="font-size:1rem; font-weight:700; color:var(--text-main); margin:24px 0 6px;">Ficha de Datos Obligatorios (18 Campos Estructurados)</h3>
+              <p style="font-size:0.8125rem; color:var(--text-muted); margin-bottom:14px;">Entidades contractuales críticas precargadas automáticamente junto a su cita textual de verificación:</p>
+              
+              <div class="visual-chip-grid">
+                <div class="visual-chip-item"><i class="fa-solid fa-building"></i> 01. Razón Social Locatario</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-id-card"></i> 02. Número de CUIT</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-user-tie"></i> 03. Representante Legal</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-door-open"></i> 04. Unidad Funcional / Piso</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-ruler-combined"></i> 05. Metros Cuadrados (m²)</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-briefcase"></i> 06. Destino de Locación</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-hourglass-half"></i> 07. Vigencia (Meses)</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-calendar-plus"></i> 08. Fecha de Inicio</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-calendar-check"></i> 09. Fecha de Vencimiento</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-clock"></i> 10. Plazo de Preaviso</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-money-bill-wave"></i> 11. Canon Locativo Mensual</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-coins"></i> 12. Moneda (USD / UVA / ARS)</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-chart-line"></i> 13. Pauta de Ajuste / Índice</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-credit-card"></i> 14. Modalidad de Pago</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-vault"></i> 15. Depósito en Garantía</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-shield-halved"></i> 16. Tipo de Garantía / Caución</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-file-shield"></i> 17. Compañía Aseguradora</div>
+                <div class="visual-chip-item"><i class="fa-solid fa-bell"></i> 18. Vencimiento de Caución</div>
               </div>
 
               <!-- Collapsible Annex 01 -->
@@ -276,7 +327,10 @@
                 </button>
                 <div class="annex-body">
                   <div class="annex-header">
-                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Justificación Técnica y Cumplimiento Normativo (T-09)
+                    <span><i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Justificación Técnica y Cumplimiento Normativo (T-09)</span>
+                    <a href="https://drive.google.com/file/d/1JV9fQtgPYsdb4VtOT6DPrlzq1CUX9Lhj/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="annex-pdf-link" title="Abrir T-09 Oportunidad de Innovación con IA en Google Drive">
+                      <i class="fa-solid fa-file-pdf"></i> T-09 PDF <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i>
+                    </a>
                   </div>
                   <p><strong>Por qué no requiere reentrenar modelos:</strong> Opera mediante zero-shot y few-shot prompting sobre modelos fundacionales preentrenados. Al ser un volumen de ~100 a 200 contratos corporativos, un enfoque de fine-tuning carecería de sentido económico. El costo computacional por documento es inferior a $0,05 USD.</p>
                   <p><strong>Pipeline de Anonimización Ley 25.326:</strong> Antes del envío a la API del modelo, se sustituyen identificadores personales por marcadores sintéticos (ej. <code>LOCATARIO_1</code>, <code>CUIT_X</code>). El mapping real se retiene en memoria local de EIA y se reinyecta al recibir la respuesta estructurada. Se firma con el proveedor cláusula de Zero Data Retention.</p>
@@ -284,27 +338,63 @@
               </div>
             </article>
 
-            <!-- Card 2: 12 Metadatos Estructurados -->
+            <!-- SECCIÓN 2: Arquitectura y Gobierno (Human-in-the-Loop) -->
             <article class="visual-slide-card">
-              <h2 class="visual-slide-title">12 Metadatos Extraídos del Contrato</h2>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                <span style="width:36px; height:36px; border-radius:50%; background:var(--primary-blue); color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; flex-shrink:0;">2</span>
+                <h2 class="visual-slide-title" style="margin:0;">Arquitectura y Gobierno (Human-in-the-Loop)</h2>
+              </div>
               <p class="visual-lead-text">
-                Entidades críticas precargadas automáticamente para validación del analista:
+                El diseño sigue un patrón de extracción y clasificación con fronteras estrictas de seguridad técnica, normativa y operativa:
               </p>
 
-              <!-- 12 Visual Metadata Chips -->
-              <div class="visual-chip-grid">
-                <div class="visual-chip-item"><i class="fa-solid fa-building"></i> 01. Razón Social Locatario</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-id-card"></i> 02. Número de CUIT</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-door-open"></i> 03. Unidad Funcional / Piso</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-hourglass-half"></i> 04. Vigencia (Meses)</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-calendar-days"></i> 05. Inicio y Vencimiento</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-money-bill-wave"></i> 06. Canon Locativo Mensual</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-coins"></i> 07. Moneda (USD / UVA / ARS)</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-chart-line"></i> 08. Pauta de Ajuste / Índice</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-vault"></i> 09. Depósito en Garantía</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-shield-halved"></i> 10. Compañía Aseguradora</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-file-shield"></i> 11. Número de Póliza</div>
-                <div class="visual-chip-item"><i class="fa-solid fa-bell"></i> 12. Vencimiento de Caución</div>
+              <!-- 4 Security Pillars Grid -->
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin:20px 0;">
+                
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                    <span class="badge-status success" style="font-size:0.75rem;"><i class="fa-solid fa-lock"></i> Privacidad</span>
+                    <i class="fa-solid fa-user-secret" style="color:var(--text-muted); font-size:1rem;"></i>
+                  </div>
+                  <h4 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--text-main);">Anonimización local previa (Ley 25.326)</h4>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.6; margin:0;">
+                    Antes de enviar el texto a un modelo externo, un componente local reemplaza nombres, DNI, CUIT y domicilios por marcadores sintéticos, reponiéndolos recién al armar la ficha en la estación de trabajo de EIA.
+                  </p>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                    <span class="badge-status info" style="font-size:0.75rem;"><i class="fa-solid fa-code-compare"></i> Verificación</span>
+                    <i class="fa-solid fa-quote-left" style="color:var(--text-muted); font-size:1rem;"></i>
+                  </div>
+                  <h4 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--text-main);">Verificación mecánica de citas</h4>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.6; margin:0;">
+                    Un control determinístico comprueba que cada cita exista literalmente en el contrato; si no coincide carácter por carácter, el campo se descarta automáticamente para evitar alucinaciones.
+                  </p>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                    <span class="badge-status warning" style="font-size:0.75rem;"><i class="fa-solid fa-hand"></i> Human-in-the-Loop</span>
+                    <i class="fa-solid fa-user-check" style="color:var(--text-muted); font-size:1rem;"></i>
+                  </div>
+                  <h4 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--text-main);">Sin escritura automática</h4>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.6; margin:0;">
+                    El asistente no tiene credenciales de Webdox ni de Tango. Un operador administrativo debe validar y confirmar campo por campo antes de guardar en las bases de datos de la empresa.
+                  </p>
+                </div>
+
+                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;">
+                    <span class="badge-status danger" style="font-size:0.75rem;"><i class="fa-solid fa-shield-halved"></i> Ciberseguridad</span>
+                    <i class="fa-solid fa-bug-slash" style="color:var(--text-muted); font-size:1rem;"></i>
+                  </div>
+                  <h4 style="margin:0 0 8px 0; font-size:0.95rem; color:var(--text-main);">Defensa ante manipulación (Prompt Injection)</h4>
+                  <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.6; margin:0;">
+                    Reglas explícitas y barreras de sanitización impiden que el asistente obedezca instrucciones ocultas dentro del texto de contratos redactados por terceros o contrapartes.
+                  </p>
+                </div>
+
               </div>
 
               <!-- Collapsible Annex 02 -->
@@ -316,7 +406,10 @@
                 </button>
                 <div class="annex-body">
                   <div class="annex-header">
-                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Las 4 Alternativas Postergadas
+                    <span><i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Las 4 Alternativas Postergadas (T-09)</span>
+                    <a href="https://drive.google.com/file/d/1JV9fQtgPYsdb4VtOT6DPrlzq1CUX9Lhj/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="annex-pdf-link" title="Abrir T-09 en Google Drive">
+                      <i class="fa-solid fa-file-pdf"></i> T-09 PDF <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i>
+                    </a>
                   </div>
                   <p><strong>Por qué se descartaron las otras 4 opciones de IA:</strong></p>
                   <ul style="margin-left:20px; font-size:0.8125rem; line-height:1.6;">
@@ -329,32 +422,199 @@
               </div>
             </article>
 
-            <!-- Card 3: Protocolo de PoC -->
+            <!-- SECCIÓN 3: Resultados del Prototipo y Pruebas -->
             <article class="visual-slide-card">
-              <h2 class="visual-slide-title">Protocolo Cuantitativo de Prueba de Concepto (PoC)</h2>
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                <span style="width:36px; height:36px; border-radius:50%; background:var(--primary-blue); color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; flex-shrink:0;">3</span>
+                <h2 class="visual-slide-title" style="margin:0;">Resultados del Prototipo y Pruebas</h2>
+              </div>
               <p class="visual-lead-text">
-                Condiciones de prueba controlada antes de autorizar cualquier despliegue operativo:
+                El equipo construyó un <strong>prototipo funcional (iterado en 3 versiones de prompt)</strong> y lo evaluó sobre un corpus de <strong>9 casos de prueba (126 campos)</strong> que incluyeron anexos complejos, escalonamientos, información incompleta, texto ilegible e intentos de manipulación:
               </p>
 
-              <!-- 3 PoC Metric Tiles -->
-              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:14px; margin:20px 0;">
-                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
-                  <div style="font-size:2.2rem; font-weight:800; color:var(--primary-blue);">20</div>
-                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Contratos de Muestra</strong>
-                  <span style="font-size:0.75rem; color:var(--text-muted);">10 estándar · 5 adendas · 5 escaneados</span>
+              <!-- Tabla Ejecutiva de Resultados -->
+              <div style="overflow-x:auto; margin:20px 0; border:1px solid var(--border-subtle); border-radius:var(--radius-md); background:#FFFFFF; box-shadow:0 1px 3px rgba(0,0,0,0.03);">
+                <table style="width:100%; border-collapse:collapse; text-align:left; font-size:0.875rem;">
+                  <thead>
+                    <tr style="background:var(--bg-surface); border-bottom:2px solid var(--border-subtle);">
+                      <th style="padding:14px 16px; font-weight:700; color:var(--text-main); width:32%;">Métrica Evaluada</th>
+                      <th style="padding:14px 16px; font-weight:700; color:var(--text-main); width:28%;">Resultado Obtenido</th>
+                      <th style="padding:14px 16px; font-weight:700; color:var(--text-main);">Lectura Ejecutiva</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="border-bottom:1px solid var(--border-subtle);">
+                      <td style="padding:14px 16px; font-weight:700; color:var(--text-main);">
+                        <i class="fa-solid fa-bullseye" style="color:#16A34A; margin-right:8px;"></i> Precisión de extracción
+                      </td>
+                      <td style="padding:14px 16px;">
+                        <span style="font-weight:800; color:#16A34A; font-size:1.05rem;">97,6 %</span>
+                        <span style="font-size:0.75rem; color:var(--text-muted); display:block;">(123 / 126 campos)</span>
+                      </td>
+                      <td style="padding:14px 16px; color:var(--text-body); font-size:0.8125rem;">
+                        Supera ampliamente el umbral objetivo del 85 %.
+                      </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-subtle);">
+                      <td style="padding:14px 16px; font-weight:700; color:var(--text-main);">
+                        <i class="fa-solid fa-quote-right" style="color:var(--primary-blue); margin-right:8px;"></i> Citas verificables
+                      </td>
+                      <td style="padding:14px 16px;">
+                        <span style="font-weight:800; color:var(--primary-blue); font-size:1.05rem;">99,1 %</span>
+                      </td>
+                      <td style="padding:14px 16px; color:var(--text-body); font-size:0.8125rem;">
+                        Permite validar cada campo leyendo una sola línea.
+                      </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-subtle);">
+                      <td style="padding:14px 16px; font-weight:700; color:var(--text-main);">
+                        <i class="fa-solid fa-user-lock" style="color:var(--primary-blue); margin-right:8px;"></i> Filtración de datos personales
+                      </td>
+                      <td style="padding:14px 16px;">
+                        <span class="badge-status success" style="font-weight:800;">0 casos</span>
+                      </td>
+                      <td style="padding:14px 16px; color:var(--text-body); font-size:0.8125rem;">
+                        Cumplimiento total de aislamiento de privacidad (Ley 25.326).
+                      </td>
+                    </tr>
+                    <tr style="border-bottom:1px solid var(--border-subtle);">
+                      <td style="padding:14px 16px; font-weight:700; color:var(--text-main);">
+                        <i class="fa-solid fa-shield-virus" style="color:#0284C7; margin-right:8px;"></i> Resistencia a manipulación
+                      </td>
+                      <td style="padding:14px 16px;">
+                        <span class="badge-status info" style="font-weight:800;">Superada</span>
+                      </td>
+                      <td style="padding:14px 16px; color:var(--text-body); font-size:0.8125rem;">
+                        Bloqueó y reportó cláusulas maliciosas embebidas (prompt injection).
+                      </td>
+                    </tr>
+                    <tr>
+                      <td style="padding:14px 16px; font-weight:700; color:var(--text-main);">
+                        <i class="fa-solid fa-triangle-exclamation" style="color:#DC2626; margin-right:8px;"></i> Errores silenciosos
+                      </td>
+                      <td style="padding:14px 16px;">
+                        <span style="font-weight:800; color:#DC2626;">1,6 %</span>
+                        <span style="font-size:0.75rem; color:var(--text-muted); display:block;">(2 campos en caso C-04)</span>
+                      </td>
+                      <td style="padding:14px 16px; color:var(--text-body); font-size:0.8125rem;">
+                        Defecto abierto: el modelo dedujo una fecha de vencimiento a partir del plazo y la presentó como extraída literalmente.
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <!-- Defecto Abierto Highlight Card -->
+              <div style="background:rgba(220,38,38,0.04); border-left:4px solid #DC2626; border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:16px 18px; margin-top:16px;">
+                <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                  <i class="fa-solid fa-circle-exclamation" style="color:#DC2626;"></i>
+                  <strong style="color:#DC2626; font-size:0.9rem;">Análisis del Defecto Abierto (Caso C-04)</strong>
+                </div>
+                <p style="font-size:0.8125rem; color:var(--text-body); line-height:1.6; margin:0;">
+                  Se detectaron <strong>2 errores silenciosos (1,6 %)</strong> donde el modelo dedujo una fecha de vencimiento calculada a partir del plazo contractual y la presentó erróneamente como si hubiese sido extraída de forma literal. Este comportamiento no es admisible en entornos contables sin advertencia explícita, lo que fundamenta la necesidad de perfeccionar el esquema de salida antes de producción.
+                </p>
+              </div>
+            </article>
+
+            <!-- SECCIÓN 4: Veredicto y Próximos Pasos -->
+            <article class="visual-slide-card">
+              <div style="display:flex; align-items:center; gap:12px; margin-bottom:12px;">
+                <span style="width:36px; height:36px; border-radius:50%; background:var(--primary-blue); color:#FFFFFF; display:flex; align-items:center; justify-content:center; font-size:1.1rem; font-weight:800; flex-shrink:0;">4</span>
+                <h2 class="visual-slide-title" style="margin:0;">Veredicto y Próximos Pasos</h2>
+              </div>
+              
+              <!-- Recomendación Final Callout -->
+              <div style="background:var(--bg-surface); border-left:4px solid var(--primary-blue); padding:18px 20px; border-radius:0 var(--radius-md) var(--radius-md) 0; margin:16px 0 24px;">
+                <h4 style="margin:0 0 6px 0; color:var(--primary-blue); font-size:1rem; display:flex; align-items:center; gap:8px;">
+                  <i class="fa-solid fa-gavel"></i>
+                  Recomendación Final: Realizar un piloto más amplio antes de decidir
+                </h4>
+                <p style="font-size:0.875rem; color:var(--text-body); line-height:1.65; margin:0;">
+                  Aunque la precisión funcional (97,6 %) y la resistencia a riesgos graves quedaron demostradas, <strong>avanzar a producción con errores silenciosos abiertos</strong> (como fechas deducidas presentadas como literales) comprometería la facturación y la cobranza de cánones.
+                </p>
+              </div>
+
+              <!-- Hoja de Ruta para EIA (5 Próximos Pasos) -->
+              <h3 style="font-size:1rem; font-weight:700; color:var(--text-main); margin:20px 0 12px;">Hoja de ruta recomendada para EIA</h3>
+              
+              <div class="flow-roadmap" style="margin:16px 0;">
+                
+                <div class="flow-step-card">
+                  <div class="flow-step-num">01</div>
+                  <div class="flow-step-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; flex-wrap:wrap; gap:6px;">
+                      <h4 style="margin:0;">Implantar primero el repositorio (T-07)</h4>
+                      <span class="badge-status info" style="font-size:0.75rem;">Prerrequisito</span>
+                    </div>
+                    <p style="font-size:0.8125rem; color:var(--text-body); margin:0;">
+                      Documentar el circuito y desplegar Webdox antes de conectar la extracción automática.
+                    </p>
+                  </div>
                 </div>
 
-                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
-                  <div style="font-size:2.2rem; font-weight:800; color:#16A34A;">≥ 85%</div>
-                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Exactitud Mínima</strong>
-                  <span style="font-size:0.75rem; color:var(--text-muted);">Umbral estricto para pasar a producción</span>
+                <div class="flow-step-card">
+                  <div class="flow-step-num">02</div>
+                  <div class="flow-step-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; flex-wrap:wrap; gap:6px;">
+                      <h4 style="margin:0;">Corregir el esquema de salida</h4>
+                      <span class="badge-status warning" style="font-size:0.75rem;">Ajuste Técnico</span>
+                    </div>
+                    <p style="font-size:0.8125rem; color:var(--text-body); margin:0;">
+                      Separar explícitamente el estado «extraído» del estado «deducido» en las reglas del modelo antes de iniciar el piloto.
+                    </p>
+                  </div>
                 </div>
 
-                <div style="background:var(--bg-surface); border:1px solid var(--border-subtle); border-radius:var(--radius-md); padding:20px; text-align:center;">
-                  <div style="font-size:2.2rem; font-weight:800; color:var(--text-main);">100%</div>
-                  <strong style="font-size:0.875rem; display:block; margin-top:4px;">Citas Comprobables</strong>
-                  <span style="font-size:0.75rem; color:var(--text-muted);">Cita textual y página verificable</span>
+                <div class="flow-step-card">
+                  <div class="flow-step-num">03</div>
+                  <div class="flow-step-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; flex-wrap:wrap; gap:6px;">
+                      <h4 style="margin:0;">Ejecutar piloto sobre cartera real</h4>
+                      <span class="badge-status success" style="font-size:0.75rem;">PoC Controlada</span>
+                    </div>
+                    <p style="font-size:0.8125rem; color:var(--text-body); margin:0;">
+                      Probar el asistente sobre 20 contratos reales anonimizados (incluyendo documentos escaneados del archivo histórico) validados por el responsable administrativo.
+                    </p>
+                  </div>
                 </div>
+
+                <div class="flow-step-card">
+                  <div class="flow-step-num">04</div>
+                  <div class="flow-step-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; flex-wrap:wrap; gap:6px;">
+                      <h4 style="margin:0;">Establecer línea base (Costo $0)</h4>
+                      <span class="badge-status success" style="font-size:0.75rem;">Inmediato</span>
+                    </div>
+                    <p style="font-size:0.8125rem; color:var(--text-body); margin:0;">
+                      Empezar a medir hoy mismo el porcentaje de contratos devueltos con errores y los días hasta la primera facturación.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flow-step-card">
+                  <div class="flow-step-num">05</div>
+                  <div class="flow-step-content">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px; flex-wrap:wrap; gap:6px;">
+                      <h4 style="margin:0;">Cerrar marco legal y roles</h4>
+                      <span class="badge-status info" style="font-size:0.75rem;">Gobernanza</span>
+                    </div>
+                    <p style="font-size:0.8125rem; color:var(--text-body); margin:0;">
+                      Contratar el modelo con exclusión expresa de entrenamiento y designar formalmente al validador administrativo y al auditor interno.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Valor Inmediato Banner -->
+              <div style="background:linear-gradient(135deg, rgba(169,83,53,0.08) 0%, rgba(2,132,199,0.06) 100%); border:1px solid rgba(169,83,53,0.25); border-radius:var(--radius-md); padding:20px 22px; margin:24px 0 16px;">
+                <div style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
+                  <i class="fa-solid fa-award" style="color:var(--primary-blue); font-size:1.3rem;"></i>
+                  <strong style="color:var(--primary-blue); font-size:0.95rem;">Valor Inmediato para la Organización</strong>
+                </div>
+                <p style="font-size:0.875rem; color:var(--text-main); line-height:1.65; margin:0; font-weight:500;">
+                  Más allá de la IA, el activo más valioso producido en esta etapa es la <strong>Ficha de Datos Obligatorios de 18 campos</strong>, que formaliza el traspaso entre Comercial, Legal y Administración y eleva el proceso del Nivel 1 al Nivel 2 de madurez CMM incluso sin tecnología.
+                </p>
               </div>
 
               <!-- Collapsible Annex 03 -->
@@ -366,9 +626,12 @@
                 </button>
                 <div class="annex-body">
                   <div class="annex-header">
-                    <i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Escenarios de Falla y Prelación Jurídica (T-10)
+                    <span><i class="fa-solid fa-file-lines"></i> Anexo Metodológico · Escenarios de Falla y Prelación Jurídica (T-10)</span>
+                    <a href="https://drive.google.com/file/d/1jJ3kysp9j4FXtQMunLHpL6kJ_VQBGwrH/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="annex-pdf-link" title="Abrir T-10 Diseño y Validación de IA en Google Drive">
+                      <i class="fa-solid fa-file-pdf"></i> T-10 PDF <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:0.7rem;"></i>
+                    </a>
                   </div>
-                  <p><strong>Escenarios de Estrés Provocados:</strong> La prueba incluye deliberadamente 5 contratos con firmas superpuestas al canon locativo, cláusulas contradictorias de renegociación y monedas mixtas (alquiler en USD y expensas en ARS).</p>
+                  <p><strong>Escenarios de Estrés Provocados:</strong> La prueba incluye deliberadamente contratos con firmas superpuestas al canon locativo, cláusulas contradictorias de renegociación y monedas mixtas (alquiler en USD y expensas en ARS).</p>
                   <p><strong>Orden de Prelación Legal:</strong> Ante cualquier contradicción entre los datos de sistema y el documento en papel o firma digital validada, prevalece siempre el contrato firmado original.</p>
                 </div>
               </div>
@@ -383,7 +646,7 @@
               <div style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-left:auto;">
                 <div class="next-phase-info" style="text-align:right;">
                   <span class="next-phase-label">Siguiente Etapa</span>
-                  <span class="next-phase-title">6. Cierre & Hoja de Ruta · Síntesis Ejecutiva</span>
+                  <span class="next-phase-title">6. Síntesis, Cierre y Hoja de Ruta</span>
                 </div>
                 <a href="6-cierre.html" class="btn-primary">
                   <span>Ir a Fase 06</span>
@@ -425,7 +688,7 @@
             <li class="footer-link-item"><a href="2-definir-el-cambio.html">2. Definiendo el cambio</a></li>
             <li class="footer-link-item"><a href="4-evaluar-opciones.html">4. Evaluando opciones</a></li>
             <li class="footer-link-item"><a href="5-explorar-innovacion.html">5. Explorando innovación</a></li>
-            <li class="footer-link-item"><a href="6-cierre.html">6. Cierre & Hoja de Ruta</a></li>
+            <li class="footer-link-item"><a href="6-cierre.html">6. Síntesis, Cierre y Hoja de Ruta</a></li>
           </ul>
         </div>
 
