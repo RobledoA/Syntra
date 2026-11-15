@@ -25,7 +25,8 @@
       
       <!-- Brand Logo -->
       <a href="index.html" class="brand-logo" aria-label="Syntra Consulting Inicio">
-        <img src="assets/logo-crop.png" alt="Syntra Consulting" class="brand-logo-img">
+        <img src="assets/logo-symbol.svg" alt="Syntra" class="brand-logo-symbol">
+        <span class="brand-logo-text">Syntra</span>
       </a>
 
       <!-- Navigation Menu with EIA Dropdown -->
@@ -131,170 +132,203 @@
           </p>
         </div>
 
-        <div class="consulting-services-grid">
+        <!-- 3D Carousel: Soluciones de Consultoría -->
+        <div class="carousel-3d-wrapper" id="servicesCarousel3D" aria-roledescription="carousel" aria-label="Soluciones de Consultoría Tecnológica">
+          
+          <!-- Flecha Izquierda -->
+          <button type="button" class="carousel-3d-btn prev" aria-label="Servicio anterior" id="carousel3DPrev" title="Ver servicio anterior">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
 
-          <!-- Card 1: Enterprise Architecture (Conservada tal cual) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-network-wired"></i>
+          <!-- Escenario 3D -->
+          <div class="carousel-3d-stage" id="carousel3DStage">
+            <div class="carousel-3d-track" id="carousel3DTrack">
+
+              <!-- Card 1: Enterprise Architecture -->
+              <div class="service-card-clean carousel-3d-card is-active" data-index="0">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-network-wired"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Arquitectura Empresarial & Sistemas Core
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Diagnóstico de madurez CMMI y relevamiento de procesos As-Is.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Diseño de Arquitectura Destino To-Be en 4 capas (Negocio, Apps, Datos e Infra).</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Desacople de monolitos y modernización de plataformas legacy.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Integración de ERPs líderes (SAP, Calipso, Axoft Tango) vía APIs y eventos.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 2: Evaluación Tecnológica, RFP & TCO -->
+              <div class="service-card-clean carousel-3d-card" data-index="1">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Evaluación Tecnológica, RFP & Análisis TCO
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Confección de pliegos técnicos y requerimientos funcionales RFP.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Evaluación multicriterio independiente.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Modelado de Costo Total de Propiedad (TCO a 3 y 5 años).</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Negociación técnica imparcial y selección de proveedores SaaS.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 3: Automatización de Procesos -->
+              <div class="service-card-clean carousel-3d-card" data-index="2">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-gears"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Automatización de Procesos & Flujos de Trabajo
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Mapeo y reingeniería de circuitos operativos manuales y repetitivos.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Diseño de flujos automatizados de aprobación, alertas y validaciones.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Interoperabilidad y sincronización fluida entre sistemas dispares.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Reducción drástica de tiempos de ciclo y eliminación de errores de carga.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 4: Inteligencia Artificial -->
+              <div class="service-card-clean carousel-3d-card" data-index="3">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Inteligencia Artificial & Soluciones Cognitivas
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Identificación de casos de uso de IA Generativa con retorno medible.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Protocolos de supervisión humana obligatoria (Human-in-the-Loop).</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Pruebas de concepto técnicas (PoC) y validación de exactitud cuantitativa.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 5: Asesoramiento Estratégico -->
+              <div class="service-card-clean carousel-3d-card" data-index="4">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-chess"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Asesoramiento Estratégico & Gobierno de TI
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Consultoría de dirección tecnológica para comités ejecutivos y Directorio.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Alineación de iniciativas de IT con los objetivos estratégicos del negocio.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Marcos de gobernanza corporativa, priorización de proyectos y presupuestos.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Diseño de hojas de ruta de transformación y planes directores de sistemas.</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Card 6: Change Management -->
+              <div class="service-card-clean carousel-3d-card" data-index="5">
+                <div class="service-icon-box">
+                  <i class="fa-solid fa-users-gear"></i>
+                </div>
+                <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
+                  Gestión del Cambio Organizacional & Adopción
+                </h3>
+                <ul class="service-check-list">
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Estrategia de transición y mitigación de fricción operativa en equipos.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Programas de capacitación práctica orientados por roles de usuario.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Elaboración de manuales ejecutivos y guías de soporte interactivo.</span>
+                  </li>
+                  <li class="service-check-item">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span>Métricas de adopción tecnológica y ciclos de mejora continua.</span>
+                  </li>
+                </ul>
+              </div>
+
             </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Arquitectura Empresarial & Sistemas Core
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Diagnóstico de madurez CMMI y relevamiento de procesos As-Is.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Diseño de Arquitectura Destino To-Be en 4 capas (Negocio, Apps, Datos e Infra).</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Desacople de monolitos y modernización de plataformas legacy.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Integración de ERPs líderes (SAP, Calipso, Axoft Tango) vía APIs y eventos.</span>
-              </li>
-            </ul>
           </div>
 
-          <!-- Card 2: Evaluación Tecnológica, RFP & TCO (Conservada tal cual) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-scale-balanced"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Evaluación Tecnológica, RFP & Análisis TCO
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Confección de pliegos técnicos y requerimientos funcionales RFP.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Evaluación multicriterio independiente.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Modelado de Costo Total de Propiedad (TCO a 3 y 5 años).</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Negociación técnica imparcial y selección de proveedores SaaS.</span>
-              </li>
-            </ul>
+          <!-- Flecha Derecha -->
+          <button type="button" class="carousel-3d-btn next" aria-label="Siguiente servicio" id="carousel3DNext" title="Ver siguiente servicio">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- Paginación de Puntos -->
+          <div class="carousel-3d-dots" id="carousel3DDots" role="tablist" aria-label="Selector de servicio">
+            <button type="button" class="carousel-3d-dot is-active" data-slide="0" aria-label="1. Arquitectura Empresarial" role="tab" aria-selected="true"></button>
+            <button type="button" class="carousel-3d-dot" data-slide="1" aria-label="2. Evaluación Tecnológica y RFP" role="tab" aria-selected="false"></button>
+            <button type="button" class="carousel-3d-dot" data-slide="2" aria-label="3. Automatización de Procesos" role="tab" aria-selected="false"></button>
+            <button type="button" class="carousel-3d-dot" data-slide="3" aria-label="4. Inteligencia Artificial" role="tab" aria-selected="false"></button>
+            <button type="button" class="carousel-3d-dot" data-slide="4" aria-label="5. Asesoramiento Estratégico" role="tab" aria-selected="false"></button>
+            <button type="button" class="carousel-3d-dot" data-slide="5" aria-label="6. Gestión del Cambio" role="tab" aria-selected="false"></button>
           </div>
 
-          <!-- Card 3: Automatización de Procesos (Nueva) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-gears"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Automatización de Procesos & Flujos de Trabajo
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Mapeo y reingeniería de circuitos operativos manuales y repetitivos.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Diseño de flujos automatizados de aprobación, alertas y validaciones.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Interoperabilidad y sincronización fluida entre sistemas dispares.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Reducción drástica de tiempos de ciclo y eliminación de errores de carga.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Card 4: Inteligencia Artificial (Nueva) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-brain"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Inteligencia Artificial & Soluciones Cognitivas
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Identificación de casos de uso de IA Generativa con retorno medible.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Protocolos de supervisión humana obligatoria (Human-in-the-Loop).</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Pruebas de concepto técnicas (PoC) y validación de exactitud cuantitativa.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Card 5: Asesoramiento Estratégico (Nueva) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-chess"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Asesoramiento Estratégico & Gobierno de TI
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Consultoría de dirección tecnológica para comités ejecutivos y Directorio.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Alineación de iniciativas de IT con los objetivos estratégicos del negocio.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Marcos de gobernanza corporativa, priorización de proyectos y presupuestos.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Diseño de hojas de ruta de transformación y planes directores de sistemas.</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Card 6: Change Management (Conservada tal cual) -->
-          <div class="service-card-clean">
-            <div class="service-icon-box">
-              <i class="fa-solid fa-users-gear"></i>
-            </div>
-            <h3 style="font-size:1.15rem; font-weight:700; color:var(--text-main); margin-bottom:6px;">
-              Gestión del Cambio Organizacional & Adopción
-            </h3>
-            <ul class="service-check-list">
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Estrategia de transición y mitigación de fricción operativa en equipos.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Programas de capacitación práctica orientados por roles de usuario.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Elaboración de manuales ejecutivos y guías de soporte interactivo.</span>
-              </li>
-              <li class="service-check-item">
-                <i class="fa-solid fa-circle-check"></i>
-                <span>Métricas de adopción tecnológica y ciclos de mejora continua.</span>
-              </li>
-            </ul>
+          <!-- Indicador táctil en mobile -->
+          <div class="carousel-3d-swipe-hint">
+            <i class="fa-solid fa-arrows-left-right"></i> Deslizá con el dedo o usá las flechas
           </div>
 
         </div>

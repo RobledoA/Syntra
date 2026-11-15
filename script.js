@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initEiaAccordion();
   initAnnexToggles();
   initMethodologyPopovers();
+  initServicesCarousel3D();
 });
 
 /* Mobile Menu Toggle & Navigation Handling */
@@ -20,6 +21,49 @@ function initMobileMenu() {
   const navMenu = document.querySelector('.nav-menu');
   const dropdownItem = document.querySelector('.nav-item-dropdown');
 
+  // EIA Dropdown: Open on hover and KEEP open until clicking anywhere on the screen
+  if (dropdownItem) {
+    const dropdownToggle = dropdownItem.querySelector('.nav-link');
+
+    // Desktop: open on hover (mouseenter) and stay open
+    dropdownItem.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768) {
+        dropdownItem.classList.add('is-open');
+      }
+    });
+
+    // Mobile: accordion click toggle
+    if (dropdownToggle) {
+      dropdownToggle.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          dropdownItem.classList.toggle('is-open');
+        }
+      });
+    }
+
+    // Close when clicking ANYWHERE outside on the screen
+    document.addEventListener('click', (e) => {
+      if (!dropdownItem.contains(e.target)) {
+        dropdownItem.classList.remove('is-open');
+      }
+    });
+
+    // Close when clicking any option inside the dropdown
+    dropdownItem.querySelectorAll('.nav-dropdown-item').forEach(link => {
+      link.addEventListener('click', () => {
+        dropdownItem.classList.remove('is-open');
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        dropdownItem.classList.remove('is-open');
+      }
+    });
+  }
+
   if (toggleBtn && navMenu) {
     toggleBtn.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -27,19 +71,6 @@ function initMobileMenu() {
       toggleBtn.classList.toggle('is-active', isOpen);
       toggleBtn.setAttribute('aria-expanded', isOpen);
     });
-
-    // Mobile dropdown toggle for EIA (accordion behavior on small screens)
-    if (dropdownItem) {
-      const dropdownToggle = dropdownItem.querySelector('.nav-link');
-      if (dropdownToggle) {
-        dropdownToggle.addEventListener('click', (e) => {
-          if (window.innerWidth <= 768) {
-            e.preventDefault();
-            dropdownItem.classList.toggle('is-open');
-          }
-        });
-      }
-    }
 
     // Close on any navigation link click (regular nav links and dropdown items)
     navMenu.querySelectorAll('a').forEach(link => {
@@ -89,9 +120,6 @@ function initMobileMenu() {
         navMenu.classList.remove('is-active');
         toggleBtn.classList.remove('is-active');
         toggleBtn.setAttribute('aria-expanded', 'false');
-        if (dropdownItem) {
-          dropdownItem.classList.remove('is-open');
-        }
       }
     });
   }
@@ -316,6 +344,315 @@ function initTeamAccordion() {
         toggleCard(card);
       }
     });
+  });
+}
+
+/* ==========================================================================
+   3D Services Carousel (Qué Hacemos)
+   Coverflow / 3D Perspective + Arrow Navigation + Touch & Drag Support
+   ========================================================================== */
+function initServicesCarousel3D() {
+  const wrapper = document.getElementById('servicesCarousel3D');
+  if (!wrapper) return;
+
+  const stage = document.getElementById('carousel3DStage');
+  const track = document.getElementById('carousel3DTrack');
+  const cards = Array.from(wrapper.querySelectorAll('.carousel-3d-card'));
+  const prevBtn = document.getElementById('carousel3DPrev');
+  const nextBtn = document.getElementById('carousel3DNext');
+  const dots = Array.from(wrapper.querySelectorAll('.carousel-3d-dot'));
+
+  if (!cards.length) return;
+
+  const totalCards = cards.length;
+  let currentIndex = 0;
+
+  function updateStageHeight() {
+    if (!stage) return;
+    let maxH = 0;
+    cards.forEach(card => {
+      const h = card.offsetHeight || card.scrollHeight;
+      if (h > maxH) maxH = h;
+    });
+    if (maxH > 0) {
+      const extraPad = window.innerWidth <= 640 ? 30 : 50;
+      const cleanH = Math.ceil(maxH / 2) * 2 + extraPad;
+      stage.style.setProperty('--carousel-stage-height', cleanH + 'px');
+    }
+  }
+
+  function updateCarousel() {
+    const w = window.innerWidth;
+    const isMobile = w <= 640;
+    const isTablet = w > 640 && w <= 992;
+
+    cards.forEach((card, k) => {
+      let offset = k - currentIndex;
+      while (offset > totalCards / 2) offset -= totalCards;
+      while (offset < -totalCards / 2) offset += totalCards;
+
+      const absOffset = Math.abs(offset);
+      const isActive = offset === 0;
+
+      card.classList.toggle('is-active', isActive);
+      card.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+      card.setAttribute('tabindex', isActive ? '0' : '-1');
+
+      let transform = '';
+      let opacity = 0;
+      let zIndex = 0;
+      let pointerEvents = 'none';
+
+      if (isMobile) {
+        if (offset === 0) {
+          transform = 'translate3d(-50%, -50%, 0) scale(1)';
+          opacity = 1;
+          zIndex = 20;
+          pointerEvents = 'auto';
+        } else if (offset === 1) {
+          transform = 'translate3d(calc(-50% + 76px), -50%, -40px) rotateY(-18deg) scale(0.88)';
+          opacity = 0.45;
+          zIndex = 5;
+          pointerEvents = 'auto';
+        } else if (offset === -1) {
+          transform = 'translate3d(calc(-50% - 76px), -50%, -40px) rotateY(18deg) scale(0.88)';
+          opacity = 0.45;
+          zIndex = 5;
+          pointerEvents = 'auto';
+        } else {
+          transform = `translate3d(calc(-50% + ${offset > 0 ? 120 : -120}px), -50%, -120px) rotateY(${offset > 0 ? -30 : 30}deg) scale(0.7)`;
+          opacity = 0;
+          zIndex = 1;
+          pointerEvents = 'none';
+        }
+      } else if (isTablet) {
+        if (offset === 0) {
+          transform = 'translate3d(-50%, -50%, 0) scale(1)';
+          opacity = 1;
+          zIndex = 20;
+          pointerEvents = 'auto';
+        } else if (offset === 1) {
+          transform = 'translate3d(calc(-50% + 200px), -50%, -60px) rotateY(-24deg) scale(0.86)';
+          opacity = 0.72;
+          zIndex = 6;
+          pointerEvents = 'auto';
+        } else if (offset === -1) {
+          transform = 'translate3d(calc(-50% - 200px), -50%, -60px) rotateY(24deg) scale(0.86)';
+          opacity = 0.72;
+          zIndex = 6;
+          pointerEvents = 'auto';
+        } else if (absOffset === 2) {
+          transform = `translate3d(calc(-50% + ${offset > 0 ? 330 : -330}px), -50%, -140px) rotateY(${offset > 0 ? -35 : 35}deg) scale(0.72)`;
+          opacity = 0.25;
+          zIndex = 2;
+          pointerEvents = 'auto';
+        } else {
+          transform = 'translate3d(-50%, -50%, -240px) scale(0.5)';
+          opacity = 0;
+          zIndex = 0;
+          pointerEvents = 'none';
+        }
+      } else {
+        // Desktop
+        if (offset === 0) {
+          transform = 'translate3d(-50%, -50%, 0) scale(1)';
+          opacity = 1;
+          zIndex = 20;
+          pointerEvents = 'auto';
+        } else if (offset === 1) {
+          transform = 'translate3d(calc(-50% + 300px), -50%, -70px) rotateY(-26deg) scale(0.88)';
+          opacity = 0.78;
+          zIndex = 6;
+          pointerEvents = 'auto';
+        } else if (offset === -1) {
+          transform = 'translate3d(calc(-50% - 300px), -50%, -70px) rotateY(26deg) scale(0.88)';
+          opacity = 0.78;
+          zIndex = 6;
+          pointerEvents = 'auto';
+        } else if (offset === 2) {
+          transform = 'translate3d(calc(-50% + 520px), -50%, -160px) rotateY(-38deg) scale(0.72)';
+          opacity = 0.38;
+          zIndex = 3;
+          pointerEvents = 'auto';
+        } else if (offset === -2) {
+          transform = 'translate3d(calc(-50% - 520px), -50%, -160px) rotateY(38deg) scale(0.72)';
+          opacity = 0.38;
+          zIndex = 3;
+          pointerEvents = 'auto';
+        } else {
+          transform = 'translate3d(-50%, -50%, -260px) rotateY(0deg) scale(0.55)';
+          opacity = 0;
+          zIndex = 0;
+          pointerEvents = 'none';
+        }
+      }
+
+      card.style.transform = transform;
+      card.style.opacity = opacity;
+      card.style.zIndex = zIndex;
+      card.style.pointerEvents = pointerEvents;
+    });
+
+    // Update Dots
+    dots.forEach((dot, idx) => {
+      const isDotActive = idx === currentIndex;
+      dot.classList.toggle('is-active', isDotActive);
+      dot.setAttribute('aria-selected', isDotActive ? 'true' : 'false');
+    });
+  }
+
+  function goTo(index) {
+    currentIndex = ((index % totalCards) + totalCards) % totalCards;
+    updateCarousel();
+  }
+
+  function goToNext() {
+    goTo(currentIndex + 1);
+  }
+
+  function goToPrev() {
+    goTo(currentIndex - 1);
+  }
+
+  // Event Listeners: Navigation Buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToPrev();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      goToNext();
+    });
+  }
+
+  // Event Listeners: Dots
+  dots.forEach((dot, idx) => {
+    dot.addEventListener('click', (e) => {
+      e.preventDefault();
+      goTo(idx);
+    });
+  });
+
+  // Event Listeners: Clicking on a side card rotates it to center
+  cards.forEach((card, idx) => {
+    card.addEventListener('click', (e) => {
+      if (idx !== currentIndex) {
+        e.preventDefault();
+        goTo(idx);
+      }
+    });
+  });
+
+  // Touch Swipe on Mobile
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+  let isSwiping = false;
+
+  if (stage) {
+    stage.addEventListener('touchstart', (e) => {
+      if (!e.touches || !e.touches[0]) return;
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+      touchEndX = touchStartX;
+      touchEndY = touchStartY;
+      isSwiping = true;
+    }, { passive: true });
+
+    stage.addEventListener('touchmove', (e) => {
+      if (!isSwiping || !e.touches || !e.touches[0]) return;
+      touchEndX = e.touches[0].clientX;
+      touchEndY = e.touches[0].clientY;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      // If swipe is horizontal, prevent document scrolling jitter
+      if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 12) {
+        if (e.cancelable) e.preventDefault();
+      }
+    }, { passive: false });
+
+    stage.addEventListener('touchend', () => {
+      if (!isSwiping) return;
+      isSwiping = false;
+      const diffX = touchEndX - touchStartX;
+      const diffY = touchEndY - touchStartY;
+
+      // 36px threshold for swipe detection
+      if (Math.abs(diffX) > 36 && Math.abs(diffX) > Math.abs(diffY)) {
+        if (diffX < 0) {
+          goToNext();
+        } else {
+          goToPrev();
+        }
+      }
+    }, { passive: true });
+
+    stage.addEventListener('touchcancel', () => {
+      isSwiping = false;
+    });
+
+    // Mouse Drag on Desktop
+    let isMouseDown = false;
+    let mouseStartX = 0;
+    let mouseDeltaX = 0;
+
+    stage.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      isMouseDown = true;
+      mouseStartX = e.clientX;
+      mouseDeltaX = 0;
+      stage.style.cursor = 'grabbing';
+    });
+
+    window.addEventListener('mousemove', (e) => {
+      if (!isMouseDown) return;
+      mouseDeltaX = e.clientX - mouseStartX;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      stage.style.cursor = '';
+      if (Math.abs(mouseDeltaX) > 50) {
+        if (mouseDeltaX < 0) {
+          goToNext();
+        } else {
+          goToPrev();
+        }
+      }
+    });
+
+    // Keyboard support (Left / Right Arrow)
+    wrapper.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        goToPrev();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        goToNext();
+      }
+    });
+  }
+
+  // Initial render & resize handler
+  updateCarousel();
+  updateStageHeight();
+
+  // Re-calculate after font and style loading
+  window.addEventListener('load', () => {
+    updateStageHeight();
+    updateCarousel();
+  });
+
+  window.addEventListener('resize', () => {
+    updateStageHeight();
+    updateCarousel();
   });
 }
 
