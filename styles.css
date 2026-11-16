@@ -2053,15 +2053,18 @@ ul, ol {
   box-shadow: 0 4px 20px rgba(15, 23, 42, 0.05);
   overflow: hidden;
   cursor: pointer;
-  flex: 0 0 76px;
-  transition: flex 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  flex: 0 0 84px;
+  transition: flex 0.55s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
   user-select: none;
 }
 
 .team-acc-card:hover:not(.is-active) {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(169, 83, 53, 0.14);
-  border-color: rgba(169, 83, 53, 0.35);
+  box-shadow: 0 8px 24px rgba(169, 83, 53, 0.12);
+  border-color: rgba(169, 83, 53, 0.4);
+}
+
+.team-acc-card:hover:not(.is-active) .team-acc-pill-img {
+  transform: scale(1.08);
 }
 
 .team-acc-card.is-active {
@@ -2079,11 +2082,13 @@ ul, ol {
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 24px 8px;
   overflow: hidden;
   border-radius: 20px;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.12s ease;
   z-index: 2;
   background-color: #F8FAFC;
 }
@@ -2095,24 +2100,52 @@ ul, ol {
 }
 
 .team-acc-pill-img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  position: static;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
   object-fit: cover;
-  object-position: center 25%;
-  transition: transform 0.4s ease;
+  object-position: center top;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
 }
 
-.team-acc-card:hover .team-acc-pill-img {
-  transform: scale(1.06);
+.team-acc-pill-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto 0;
 }
 
-.team-acc-pill-info,
-.team-acc-pill-name,
-.team-acc-pill-role,
-.team-acc-pill-chevron {
+.team-acc-pill-name {
+  display: block;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text-main);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.team-acc-pill-role {
   display: none;
+}
+
+.team-acc-pill-chevron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(169, 83, 53, 0.08);
+  color: var(--primary-blue);
+  font-size: 0.75rem;
+  flex-shrink: 0;
 }
 
 /* Expanded View */
@@ -2124,7 +2157,7 @@ ul, ol {
   padding: 28px 36px;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.35s ease 0.12s;
+  transition: opacity 0.35s ease 0.22s;
   min-width: 560px;
   width: 100%;
 }

@@ -309,8 +309,10 @@ function initTeamAccordion() {
   if (!cards.length) return;
 
   let activeCard = accordion.querySelector('.team-acc-card.is-active') || cards[0];
+  let hoverTimer = null;
 
   function toggleCard(targetCard) {
+    if (!targetCard) return;
     const isMobile = window.innerWidth <= 860;
 
     // Mobile: tapping an already open card toggles it closed
@@ -320,6 +322,8 @@ function initTeamAccordion() {
       activeCard = null;
       return;
     }
+
+    if (activeCard === targetCard) return;
 
     cards.forEach(card => {
       const isActive = card === targetCard;
@@ -331,12 +335,12 @@ function initTeamAccordion() {
     if (isMobile) {
       setTimeout(() => {
         targetCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      }, 100);
+      }, 120);
     }
   }
 
   cards.forEach(card => {
-    // Click on card / pill
+    // Click on card / pill to activate
     card.addEventListener('click', (e) => {
       const isMobile = window.innerWidth <= 860;
       // On mobile, ignore clicks inside expanded content area (text selection, reading)
@@ -344,13 +348,6 @@ function initTeamAccordion() {
         return;
       }
       toggleCard(card);
-    });
-
-    // Hover on desktop
-    card.addEventListener('mouseenter', () => {
-      if (window.innerWidth > 860) {
-        toggleCard(card);
-      }
     });
 
     // Keyboard support
