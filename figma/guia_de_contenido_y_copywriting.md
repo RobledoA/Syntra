@@ -79,7 +79,7 @@ Este documento contiene la matriz integral de textos, jerarquías y lineamientos
 - **Etapa 01:** `Entender la Organización`
   - *Bajada:* Relevamos los circuitos operativos reales, diagnosticamos el nivel de madurez CMM y definimos qué mantener y qué transformar con rigor MoSCoW.
 - **Etapa 02:** `Definir el Cambio`
-  - *Bajada:* Diseñamos la arquitectura destino en 4 capas (Negocio, Datos, Aplicaciones, Infraestructura) integrando herramientas ágiles con su ERP contable.
+  - *Bajada:* Diseñamos la arquitectura destino en 4 capas (Negocio, Datos, Aplicaciones, Infraestructura) integrando herramientas modernas con los sistemas centrales del negocio.
 - **Etapa 03:** `Evaluar Opciones con Objetividad`
   - *Bajada:* Construimos pliegos licitatorios (RFP) y evaluamos alternativas del mercado mediante matrices multicriterio y modelos de Costo Total a 3 años (TCO).
 - **Etapa 04:** `Explorar Innovación & IA`
@@ -89,14 +89,14 @@ Este documento contiene la matriz integral de textos, jerarquías y lineamientos
 
 #### F. Formulario de Contacto (`#contacto`)
 - **Badge:** `Contacto Directo`
-- **Título H2:** `Iniciemos tu Proyecto de Transformación`
-- **Párrafo Lead:** `Completá tus datos para coordinar una sesión de trabajo y diagnóstico preliminar con el equipo directivo de Syntra Consulting:`
+- **Título H2:** `Iniciemos su Proyecto de Transformación`
+- **Párrafo Lead:** `Complete sus datos para coordinar una sesión de trabajo y diagnóstico preliminar con el equipo directivo de Syntra Consulting:`
 - **Campos:**
   - `Nombre y Apellido *` (Placeholder: *Ej. Dora Poceiro*)
   - `Empresa / Organización *` (Placeholder: *Ej. Emprendimientos Inmobiliarios Arenales S.A.*)
   - `Correo Corporativo *` (Placeholder: *contacto@empresa.com*)
   - `Teléfono` (Placeholder: *+54 11 ....*)
-  - `Consulta o requerimiento *` (Placeholder: *Comentanos brevemente la situación operativa o tecnológica de tu empresa...*)
+  - `Consulta o requerimiento *` (Placeholder: *Coméntenos brevemente la situación operativa o tecnológica de su empresa...*)
 - **Botón de Envío:** `Enviar Consulta`
 - **Disclaimer:** `Respuesta confidencial en menos de 24 hs hábiles.`
 
@@ -104,7 +104,7 @@ Este documento contiene la matriz integral de textos, jerarquías y lineamientos
 - **Descripción de marca:** `Syntra Consulting es una firma de consultoría especializada creada para impulsar a las organizaciones mediante arquitectura estructurada, tecnología inteligente y ejecución pragmática.`
 - **Columna Caso EIA:** Enlaces a las 5 fases y al Hub general.
 - **Columna Metodología:** Enlaces temáticos al Diagnóstico, Brechas, Matriz RFP, IA y Roadmap.
-- **Columna Newsletter:** `Recibí análisis ejecutivos sobre tecnología corporativa y arquitectura empresarial.`
+- **Columna Newsletter:** `Reciba análisis ejecutivos sobre tecnología corporativa y arquitectura empresarial.`
 - **Copyright:** `Copyright 2026 · Todos los derechos reservados · Syntra Consulting`
 
 ---

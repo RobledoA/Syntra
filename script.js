@@ -4,6 +4,7 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHeroVideo();
   initMobileMenu();
   initHeaderScroll();
   initNavSmoothScroll();
@@ -14,6 +15,21 @@ document.addEventListener('DOMContentLoaded', () => {
   initMethodologyPopovers();
   initServicesCarousel3D();
 });
+
+/* Hero Background Video Autoplay Safety */
+function initHeroVideo() {
+  const video = document.querySelector('.hero-video-bg');
+  if (video) {
+    video.muted = true;
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        document.addEventListener('touchstart', () => video.play(), { once: true });
+        document.addEventListener('click', () => video.play(), { once: true });
+      });
+    }
+  }
+}
 
 /* Mobile Menu Toggle & Navigation Handling */
 function initMobileMenu() {
@@ -177,7 +193,7 @@ function initNewsletterToast() {
           setTimeout(() => {
             originalBtn.innerHTML = originalHTML;
             originalBtn.style.backgroundColor = '';
-            input.placeholder = 'Ingresa tu correo';
+            input.placeholder = 'Ingrese su correo';
           }, 3000);
         }
       }
