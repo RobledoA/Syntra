@@ -16,6 +16,26 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+
+  <!-- EIA Session Fast Auth Guard (Anti-Flicker) -->
+  <script>
+    (function() {
+      function checkAuth() {
+        var c = document.cookie.split(';');
+        for (var i = 0; i < c.length; i++) {
+          var pair = c[i].trim().split('=');
+          if (pair[0] === 'eia_session' && pair[1] === 'authenticated') return true;
+        }
+        try { if (localStorage.getItem('eia_session') === 'authenticated') return true; } catch(e){}
+        return false;
+      }
+      if (checkAuth()) {
+        document.documentElement.classList.add('eia-auth-granted');
+      } else {
+        document.documentElement.classList.add('eia-auth-denied');
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -66,12 +86,20 @@
                 <i class="fa-solid fa-flag-checkered"></i>
                 <span>5. Síntesis, Cierre y Hoja de Ruta</span>
               </a>
+              <button type="button" class="nav-dropdown-item nav-dropdown-logout eia-logout-btn" title="Cerrar sesión de EIA">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Cerrar sesión EIA</span>
+              </button>
             </div>
           </li>
         </ul>
       </nav>
 
       <div class="header-actions">
+        <button type="button" class="nav-logout-btn eia-logout-btn" title="Cerrar sesión de EIA" aria-label="Cerrar sesión de EIA">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Cerrar sesión</span>
+        </button>
         <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -80,6 +108,77 @@
   </header>
 
   <main>
+
+    <!-- EIA Access Denied / Password Protection Screen -->
+    <section class="eia-denied-screen" aria-live="polite">
+      <div class="ambient-glow"></div>
+      <div class="container eia-denied-container">
+        
+        <div class="eia-denied-card" id="eiaAuthCard">
+          <div class="eia-denied-icon-wrap">
+            <div class="eia-denied-icon-circle">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <span class="eia-denied-status-badge">
+              <i class="fa-solid fa-lock"></i> Contenido Protegido
+            </span>
+          </div>
+
+          <h1 class="eia-denied-title">Acceso Denegado</h1>
+          <p class="eia-denied-subtitle">
+            El contenido del caso de estudio <strong>Emprendimientos Inmobiliarios Arenales S.A. (EIA)</strong> y todas sus secciones metodológicas se encuentran protegidos.
+          </p>
+          <p class="eia-denied-hint">
+            Por favor, inicie sesión con la contraseña autorizada para desbloquear el trabajo completo.
+          </p>
+
+          <form class="eia-auth-form" id="eiaAuthForm" novalidate>
+            <div class="eia-auth-field-group">
+              <label for="eiaPasswordInput" class="eia-auth-label">Contraseña de acceso</label>
+              <div class="eia-auth-input-wrapper">
+                <i class="fa-solid fa-key eia-input-icon"></i>
+                <input 
+                  type="password" 
+                  class="eia-auth-input" 
+                  id="eiaPasswordInput" 
+                  placeholder="Ingrese la contraseña" 
+                  autocomplete="current-password"
+                  required
+                >
+                <button type="button" class="eia-toggle-pwd" id="eiaTogglePwd" aria-label="Mostrar u ocultar contraseña" title="Mostrar/ocultar contraseña">
+                  <i class="fa-regular fa-eye"></i>
+                </button>
+              </div>
+
+              <div id="eiaAuthError" class="eia-auth-feedback is-error" style="display:none;" role="alert">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Acceso denegado: Contraseña incorrecta. Intente nuevamente.</span>
+              </div>
+
+              <div id="eiaAuthSuccess" class="eia-auth-feedback is-success" style="display:none;" role="status">
+                <i class="fa-solid fa-circle-check"></i>
+                <span>Contraseña verificada. Desbloqueando todas las secciones...</span>
+              </div>
+
+              <button type="submit" class="btn-primary eia-auth-submit-btn" id="eiaSubmitBtn">
+                <span>Iniciar Sesión</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </div>
+          </form>
+
+          <div class="eia-denied-footer">
+            <a href="index.html" class="eia-back-home-link">
+              <i class="fa-solid fa-arrow-left"></i> Volver a la página principal
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EIA Protected Content Wrapper -->
+    <div class="eia-protected-content">
 
     <!-- Phase Hero Banner (Clean, Typographic, No Clutter) -->
     <section class="hero-section">
@@ -389,6 +488,9 @@
 
       </div>
     </section>
+
+    </div>
+    <!-- End EIA Protected Content Wrapper -->
 
   </main>
 

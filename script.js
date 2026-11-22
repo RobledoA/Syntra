@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAnnexToggles();
   initMethodologyPopovers();
   initServicesCarousel3D();
+  initEiaAuthGuard();
 });
 
 /* Hero Background Video Autoplay Safety */
@@ -667,5 +668,167 @@ function initServicesCarousel3D() {
     updateStageHeight();
     updateCarousel();
   });
+}
+
+/* ==========================================================================
+   EIA Authentication & Access Control (Cookie-based Session)
+   Password: Test
+   ========================================================================== */
+
+function getEiaCookie() {
+  const name = "eia_session=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i].trim();
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function setEiaCookie(val, days) {
+  days = days || 7;
+  const date = new Date();
+  date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+  const expires = "expires=" + date.toUTCString();
+  document.cookie = "eia_session=" + encodeURIComponent(val) + ";" + expires + ";path=/;SameSite=Lax";
+  try {
+    localStorage.setItem("eia_session", val);
+  } catch (e) {}
+}
+
+function clearEiaCookie() {
+  document.cookie = "eia_session=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax";
+  try {
+    localStorage.removeItem("eia_session");
+  } catch (e) {}
+}
+
+function isEiaAuthenticated() {
+  const cookieVal = getEiaCookie();
+  if (cookieVal === "authenticated") return true;
+  try {
+    if (localStorage.getItem("eia_session") === "authenticated") return true;
+  } catch (e) {}
+  return false;
+}
+
+function initEiaAuthGuard() {
+  const deniedScreen = document.querySelector('.eia-denied-screen');
+  const protectedContent = document.querySelector('.eia-protected-content');
+  const authForm = document.getElementById('eiaAuthForm');
+  const pwdInput = document.getElementById('eiaPasswordInput');
+  const authError = document.getElementById('eiaAuthError');
+  const authSuccess = document.getElementById('eiaAuthSuccess');
+  const authCard = document.getElementById('eiaAuthCard');
+  const togglePwdBtn = document.getElementById('eiaTogglePwd');
+  const logoutBtns = document.querySelectorAll('.eia-logout-btn');
+
+  function updateAuthState(granted) {
+    if (granted) {
+      document.documentElement.classList.add('eia-auth-granted');
+      document.documentElement.classList.remove('eia-auth-denied');
+      setTimeout(() => {
+        window.dispatchEvent(new Event('resize'));
+      }, 50);
+    } else {
+      document.documentElement.classList.add('eia-auth-denied');
+      document.documentElement.classList.remove('eia-auth-granted');
+      if (pwdInput) {
+        pwdInput.value = '';
+      }
+    }
+  }
+
+  // Estado inicial sincronizado
+  if (isEiaAuthenticated()) {
+    updateAuthState(true);
+  } else {
+    updateAuthState(false);
+  }
+
+  // Cerrar sesión desde cualquier botón (Navbar, Dropdown, etc.)
+  logoutBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      clearEiaCookie();
+      if (authError) authError.style.display = 'none';
+      if (authSuccess) authSuccess.style.display = 'none';
+      updateAuthState(false);
+    });
+  });
+
+  // Si esta página no tiene formulario de login, no hay más por configurar
+  if (!authForm && !pwdInput) return;
+
+  // Toggle visibilidad de contraseña
+  if (togglePwdBtn && pwdInput) {
+    togglePwdBtn.addEventListener('click', () => {
+      const isPwd = pwdInput.type === 'password';
+      pwdInput.type = isPwd ? 'text' : 'password';
+      const icon = togglePwdBtn.querySelector('i');
+      if (icon) {
+        icon.className = isPwd ? 'fa-regular fa-eye-slash' : 'fa-regular fa-eye';
+      }
+    });
+  }
+
+  // Manejador de Login
+  function handleLogin() {
+    if (!pwdInput) return;
+    const enteredPassword = pwdInput.value;
+
+    // Validación case-sensitive exacta de la contraseña 'Test'
+    if (enteredPassword === 'Test') {
+      if (authError) authError.style.display = 'none';
+      if (authSuccess) authSuccess.style.display = 'flex';
+      
+      // Guardar en Cookie con path=/ para cubrir todas las secciones
+      setEiaCookie('authenticated', 7);
+
+      setTimeout(() => {
+        if (authSuccess) authSuccess.style.display = 'none';
+        updateAuthState(true);
+      }, 350);
+    } else {
+      if (authError) {
+        authError.style.display = 'flex';
+      }
+      if (authSuccess) authSuccess.style.display = 'none';
+      
+      if (authCard) {
+        authCard.classList.remove('is-shaking');
+        void authCard.offsetWidth;
+        authCard.classList.add('is-shaking');
+      }
+      pwdInput.select();
+    }
+  }
+
+  if (authForm) {
+    authForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      handleLogin();
+    });
+  }
+
+  const submitBtn = document.getElementById('eiaSubmitBtn');
+  if (submitBtn) {
+    submitBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      handleLogin();
+    });
+  }
+
+  if (pwdInput) {
+    pwdInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        handleLogin();
+      }
+    });
+  }
 }
 

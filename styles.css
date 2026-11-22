@@ -4029,3 +4029,342 @@ ul, ol {
   font-size: 0.75rem;
   flex-shrink: 0;
 }
+
+/* ==========================================================================
+   EIA Password Protection & Access Denied System
+   Contenido protegido bajo contraseña 'Test' con persistencia en Cookie
+   ========================================================================== */
+
+/* Reglas de visibilidad basadas en el estado de autenticación en <html> */
+html.eia-auth-denied .eia-protected-content,
+html.eia-auth-denied footer {
+  display: none !important;
+}
+
+html.eia-auth-denied .eia-denied-screen {
+  display: flex !important;
+}
+
+html.eia-auth-granted .eia-denied-screen {
+  display: none !important;
+}
+
+html.eia-auth-granted .eia-protected-content {
+  display: block !important;
+}
+
+html.eia-auth-granted footer {
+  display: block !important;
+}
+
+/* Pantalla de Acceso Denegado */
+.eia-denied-screen {
+  display: none;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 135px 20px 80px;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, rgba(169, 83, 53, 0.08) 0%, rgba(245, 244, 239, 0.95) 100%);
+}
+
+.eia-denied-container {
+  max-width: 580px;
+  width: 100%;
+  margin: 10px auto 30px;
+  position: relative;
+  z-index: 2;
+}
+
+.eia-denied-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(24, 28, 25, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.eia-denied-card.is-shaking {
+  animation: eiaShake 0.45s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes eiaShake {
+  10%, 90% { transform: translate3d(-3px, 0, 0); }
+  20%, 80% { transform: translate3d(5px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+  40%, 60% { transform: translate3d(6px, 0, 0); }
+}
+
+.eia-denied-icon-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.eia-denied-icon-circle {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #FEF2F2;
+  border: 2px solid #FECACA;
+  color: #DC2626;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.15);
+}
+
+.eia-denied-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  border-radius: 9999px;
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #B91C1C;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.eia-denied-title {
+  font-size: 1.875rem;
+  font-weight: 800;
+  color: var(--text-main);
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+
+.eia-denied-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-body);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.eia-denied-hint {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+/* Formulario */
+.eia-auth-form {
+  margin-bottom: 24px;
+}
+
+.eia-auth-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.eia-auth-label {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.eia-auth-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.eia-input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--text-muted);
+  font-size: 1rem;
+  pointer-events: none;
+}
+
+.eia-auth-input {
+  width: 100%;
+  padding: 14px 44px 14px 44px;
+  font-family: var(--font-main);
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-card);
+  border-radius: var(--radius-md);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.eia-auth-input:focus {
+  background: #FFFFFF;
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
+.eia-toggle-pwd {
+  position: absolute;
+  right: 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.eia-toggle-pwd:hover {
+  color: var(--text-main);
+}
+
+.eia-auth-feedback {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eia-auth-feedback.is-error {
+  background: #FEF2F2;
+  border: 1px solid #FCA5A5;
+  color: #B91C1C;
+}
+
+.eia-auth-feedback.is-success {
+  background: #ECFDF5;
+  border: 1px solid #6EE7B7;
+  color: #047857;
+}
+
+.eia-auth-submit-btn {
+  width: 100%;
+  justify-content: center;
+  padding: 14px 24px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.eia-denied-footer {
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 18px;
+  margin-top: 8px;
+}
+
+.eia-back-home-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-body);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s ease;
+}
+
+.eia-back-home-link:hover {
+  color: var(--primary-blue);
+}
+
+/* Botón de Cerrar Sesión en Navbar */
+.nav-logout-btn {
+  display: none;
+  align-items: center;
+  gap: 7px;
+  background: rgba(220, 38, 38, 0.08);
+  border: 1px solid rgba(220, 38, 38, 0.22);
+  color: #DC2626;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-main);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.nav-logout-btn:hover {
+  background: #DC2626;
+  border-color: #DC2626;
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
+  transform: translateY(-1px);
+}
+
+.nav-logout-btn i {
+  font-size: 0.875rem;
+}
+
+/* Ítem de Cerrar Sesión en Dropdown de EIA */
+.nav-dropdown-logout {
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px !important;
+  font-family: var(--font-main);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #DC2626 !important;
+  border-top: 1px solid var(--border-subtle);
+  margin-top: 4px;
+  transition: background 0.15s ease;
+}
+
+.nav-dropdown-logout:hover {
+  background: rgba(220, 38, 38, 0.08) !important;
+  color: #B91C1C !important;
+}
+
+.nav-dropdown-logout i {
+  color: #DC2626 !important;
+}
+
+/* Visibilidad de los botones de logout */
+html.eia-auth-granted .nav-logout-btn {
+  display: inline-flex !important;
+}
+
+html.eia-auth-granted .nav-dropdown-logout {
+  display: flex !important;
+}
+
+html.eia-auth-denied .nav-logout-btn,
+html.eia-auth-denied .nav-dropdown-logout {
+  display: none !important;
+}
+
+@media (max-width: 768px) {
+  .eia-denied-screen {
+    padding: 110px 16px 60px;
+  }
+  .nav-logout-btn {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+  .nav-logout-btn span {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .eia-denied-card {
+    padding: 32px 20px;
+  }
+}

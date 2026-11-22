@@ -16,6 +16,26 @@
 
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/logo-symbol.svg">
+
+  <!-- EIA Session Fast Auth Guard (Anti-Flicker) -->
+  <script>
+    (function() {
+      function checkAuth() {
+        var c = document.cookie.split(';');
+        for (var i = 0; i < c.length; i++) {
+          var pair = c[i].trim().split('=');
+          if (pair[0] === 'eia_session' && pair[1] === 'authenticated') return true;
+        }
+        try { if (localStorage.getItem('eia_session') === 'authenticated') return true; } catch(e){}
+        return false;
+      }
+      if (checkAuth()) {
+        document.documentElement.classList.add('eia-auth-granted');
+      } else {
+        document.documentElement.classList.add('eia-auth-denied');
+      }
+    })();
+  </script>
 </head>
 <body>
 
@@ -69,6 +89,10 @@
                 <i class="fa-solid fa-flag-checkered"></i>
                 <span>5. Síntesis, Cierre y Hoja de Ruta</span>
               </a>
+              <button type="button" class="nav-dropdown-item nav-dropdown-logout eia-logout-btn" title="Cerrar sesión de EIA">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                <span>Cerrar sesión EIA</span>
+              </button>
             </div>
           </li>
         </ul>
@@ -76,6 +100,11 @@
 
       <!-- Actions -->
       <div class="header-actions">
+        <button type="button" class="nav-logout-btn eia-logout-btn" title="Cerrar sesión de EIA" aria-label="Cerrar sesión de EIA">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Cerrar sesión</span>
+        </button>
+
         <button class="mobile-toggle" aria-label="Abrir menú" aria-expanded="false">
           <span></span>
           <span></span>
