@@ -672,7 +672,7 @@ function initServicesCarousel3D() {
 
 /* ==========================================================================
    EIA Authentication & Access Control (Cookie-based Session)
-   Password: Test
+   Password: Sog5ztjxyoYL@
    ========================================================================== */
 
 function getEiaCookie() {
@@ -780,8 +780,8 @@ function initEiaAuthGuard() {
     if (!pwdInput) return;
     const enteredPassword = pwdInput.value;
 
-    // Validación case-sensitive exacta de la contraseña 'Test'
-    if (enteredPassword === 'Test') {
+    // Validación case-sensitive exacta de la contraseña
+    if (enteredPassword === 'Sog5ztjxyoYL@') {
       if (authError) authError.style.display = 'none';
       if (authSuccess) authSuccess.style.display = 'flex';
       
